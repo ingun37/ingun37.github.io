@@ -1,1 +1,6 @@
-@import '@material/react-card/index.scss';
+@import "@material/react-card/index.scss";
+
+.MyCard {
+    text-align: center;
+    // @include mdc-card-fill-color(aqua);
+}

@@ -3,12 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 import { Cell, Grid, Row } from '@material/react-layout-grid';
 import MyCard from "./MyCard";
-
-function MyHeader() {
-  return (
-    <h1>개발자 전인건입돠</h1>
-  );
-}
+import MyHeader from "./MyHeader";
 
 function App() {
   return (
@@ -17,9 +12,10 @@ function App() {
         <Cell columns={12}><MyHeader /></Cell>
       </Row>
       <Row>
-        <Cell><MyCard/></Cell>
-        <Cell><MyCard/></Cell>
-        <Cell><MyCard/></Cell>
+        <Cell columns={3}><MyCard/></Cell>
+        <Cell columns={3}><MyCard/></Cell>
+        <Cell columns={3}><MyCard/></Cell>
+        <Cell columns={3}><MyCard/></Cell>
       </Row>
       <Row>
         <Cell columns={12}>Tennis</Cell>

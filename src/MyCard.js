@@ -10,21 +10,11 @@ import Card, {
 
 function MyCard() {
     return (
-        <Card>
+        <Card className="MyCard">
             <CardPrimaryContent>
                 <h1>Header</h1>
-                <CardMedia square imageUrl='./my/fancy/image.png' />
             </CardPrimaryContent>
 
-            <CardActions>
-                <CardActionButtons>
-                    <button>Click Me</button>
-                </CardActionButtons>
-
-                <CardActionIcons>
-                    <i>Click Me Too!</i>
-                </CardActionIcons>
-            </CardActions>
         </Card>
     );
 }

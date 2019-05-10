@@ -1,25 +1,56 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Button from '@material/react-button';
+import { Cell, Grid, Row } from '@material/react-layout-grid';
+import Card, {
+  CardPrimaryContent,
+  CardMedia,
+  CardActions,
+  CardActionButtons,
+  CardActionIcons
+} from "@material/react-card";
 
+function MyHeader() {
+  return (
+    <h1>개발자 전인건입돠</h1>
+  );
+}
+function MyCard() {
+  return (
+    <Card>
+      <CardPrimaryContent>
+        <h1>Header</h1>
+        <CardMedia square imageUrl='./my/fancy/image.png' />
+      </CardPrimaryContent>
+
+      <CardActions>
+        <CardActionButtons>
+          <button>Click Me</button>
+        </CardActionButtons>
+
+        <CardActionIcons>
+          <i>Click Me Too!</i>
+        </CardActionIcons>
+      </CardActions>
+    </Card>
+  );
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid>
+      <Row>
+        <Cell columns={12}><MyHeader /></Cell>
+      </Row>
+      <Row>
+        <Cell><MyCard/></Cell>
+        <Cell><MyCard/></Cell>
+        <Cell><MyCard/></Cell>
+      </Row>
+      <Row>
+        <Cell columns={12}>Tennis</Cell>
+      </Row>
+    </Grid>
   );
 }
 

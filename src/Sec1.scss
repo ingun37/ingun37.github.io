@@ -1,7 +1,7 @@
 @import "@material/react-card/index.scss";
 .Sec1 {
   text-align: center;
-//   default-margin: 16px;
+  //   default-margin: 16px;
 }
 #title {
   color: deeppink;
@@ -11,11 +11,11 @@
   @include mdc-card-fill-color(mediumspringgreen);
 }
 .MyCard p {
-  color: rgb(69, 88, 15);
+  color: rgb(26, 12, 71);
 }
 .MyCardMedia {
-//   @include mdc-card-media-aspect-ratio(16, 5);
-height: 80px;
+  //   @include mdc-card-media-aspect-ratio(16, 5);
+  height: 80px;
 }
 .MyCardMedia .MediaDiv {
   display: flex;
@@ -23,5 +23,5 @@ height: 80px;
   justify-content: center;
   height: 100%;
   width: 100%;
-  color: rgb(10, 72, 114);
+  color: rgb(29, 204, 216);
 }

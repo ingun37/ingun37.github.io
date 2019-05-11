@@ -8,16 +8,12 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Sec1 from "./Sec1";
 const Fullpage = () => (
   <ReactFullpage
-    sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
+    sectionsColor={["rgb(20, 24, 59)", "#ff5f45", "#0798ec"]}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
             <Sec1/>
-            {/* <p>Section 1 (welcome to fullpage.js)</p>
-            <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button> */}
           </div>
           <div className="section">
             <p>Section 2</p>

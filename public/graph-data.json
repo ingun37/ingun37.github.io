@@ -1,0 +1,493 @@
+{
+    "nodes": [
+        {
+            "label": "Game",
+            "x": 3.5,
+            "y": -0.4,
+            "size": 3,
+            "id": "game"
+        },
+        {
+            "label": "Unity3D",
+            "x": 4.1,
+            "y": -1.1,
+            "size": 2,
+            "id": "unity3d"
+        },
+        {
+            "label": "Graphics",
+            "x": 4,
+            "y": 0,
+            "size": 3,
+            "id": "graphics"
+        },
+        {
+            "label": "OpenGL",
+            "x": 4,
+            "y": -0.4,
+            "size": 1,
+            "id": "opengl"
+        },
+        {
+            "label": "DirectX",
+            "x": 4.3,
+            "y": 0.3,
+            "size": 1,
+            "id": "directx"
+        },
+        {
+            "label": "Metal",
+            "x": 3.5,
+            "y": 0.3,
+            "size": 1,
+            "id": "metal"
+        },
+        {
+            "label": "Application",
+            "x": 2.3,
+            "y": -2.4,
+            "size": 3,
+            "id": "application"
+        },
+        {
+            "label": "Web",
+            "x": 2.1,
+            "y": -2.7,
+            "size": 1,
+            "id": "web"
+        },
+        {
+            "label": "iOS",
+            "x": 1.6,
+            "y": -2.4,
+            "size": 1,
+            "id": "ios"
+        },
+        {
+            "label": "Android",
+            "x": 2.8,
+            "y": -2.1,
+            "size": 1,
+            "id": "android"
+        },
+        {
+            "label": "Windows",
+            "x": 2.1,
+            "y": -1.8,
+            "size": 1,
+            "id": "windows"
+        },
+        {
+            "label": "Mathematics",
+            "x": 0.8,
+            "y": 0,
+            "size": 3,
+            "id": "mathematics"
+        },
+        {
+            "label": "Haskell",
+            "x": -0.1,
+            "y": 0,
+            "size": 3,
+            "id": "haskell"
+        },
+        {
+            "label": "Category theory",
+            "x": 0.8,
+            "y": -0.4,
+            "size": 3,
+            "id": "category"
+        },
+        {
+            "label": "Topology",
+            "x": 0.25,
+            "y": 0.43,
+            "size": 3,
+            "id": "topology"
+        },
+        {
+            "label": "Linear Algebra",
+            "x": 1.8,
+            "y": 0.4,
+            "size": 3,
+            "id": "linearalgebra"
+        },
+        {
+            "label": "Microservices",
+            "x": 0.1616090344502683,
+            "y": -1.2083992981307934,
+            "size": 4,
+            "id": "microservices"
+        },
+        {
+            "label": "Kubernetes",
+            "x": -0.2154944574054536,
+            "y": -0.9702286716956009,
+            "size": 1,
+            "id": "kubernetes"
+        },
+        {
+            "label": "Docker",
+            "x": 0.40970343698692746,
+            "y": -0.8908384628838699,
+            "size": 1,
+            "id": "docker"
+        },
+        {
+            "label": "Database",
+            "x": -1.5452804550019463,
+            "y": -2.1412342516686316,
+            "size": 4,
+            "id": "database"
+        },
+        {
+            "label": "Cloud",
+            "x": -1.5452804550019463,
+            "y": -1.2083992981307934,
+            "size": 4,
+            "id": "cloud"
+        },
+        {
+            "label": "Firebase",
+            "x": -1.7,
+            "y": -1.5,
+            "size": 2,
+            "id": "firebase"
+        },
+        {
+            "label": "Python Anywhere",
+            "x": -1.7,
+            "y": -1.0,
+            "size": 2,
+            "id": "pythonanywhere"
+        },
+        {
+            "label": "NoSQL",
+            "x": -1.2773385002623545,
+            "y": -2.3694811020023576,
+            "size": 2,
+            "id": "nosql"
+        },
+        {
+            "label": "FireStore",
+            "x": -0.98954899331983,
+            "y": -2.2702433409876943,
+            "size": 1,
+            "id": "firestore"
+        },
+        {
+            "label": "Redis",
+            "x": -1.2773385002623545,
+            "y": -2.61681326555368,
+            "size": 1,
+            "id": "redis"
+        },
+        {
+            "label": "Graph",
+            "x": -1.8032986336400718,
+            "y": -2.4381852957272856,
+            "size": 2,
+            "id": "graph"
+        },
+        {
+            "label": "DGraph",
+            "x": -1.7437559770312738,
+            "y": -2.7160510265683437,
+            "size": 1,
+            "id": "dgraph"
+        },
+        {
+            "label": "ArangoDB",
+            "x": -2.099357998078892,
+            "y": -2.439274490665252,
+            "size": 1,
+            "id": "arangodb"
+        },
+        {
+            "label": "RDBMS",
+            "x": -1.8603402200252814,
+            "y": -1.9612389345580308,
+            "size": 2,
+            "id": "rdbms"
+        },
+        {
+            "label": "TypeORM",
+            "x": -2.075791363752458,
+            "y": -1.8708689797306226,
+            "size": 1,
+            "id": "typeorm"
+        },
+        {
+            "label": "Automation",
+            "x": 4,
+            "y": -2.2,
+            "size": 3,
+            "id": "automation"
+        },
+        {
+            "label": "Gradle",
+            "x": 4.1,
+            "y": -2.6,
+            "size": 1,
+            "id": "gradle"
+        },
+        {
+            "label": "Shell",
+            "x": 4,
+            "y": -2.8,
+            "size": 1,
+            "id": "shell"
+        },
+        {
+            "label": "Server",
+            "x": 0.5,
+            "y": -2,
+            "size": 4,
+            "id": "server"
+        },
+        {
+            "label": "GRPC",
+            "x": 0.6,
+            "y": -1.7,
+            "size": 1,
+            "id": "grpc"
+        },
+        {
+            "label": "Go",
+            "x": 0,
+            "y": -2,
+            "size": 1,
+            "id": "go"
+        },
+        {
+            "label": "Flask",
+            "x": 0.8,
+            "y": -2.15,
+            "size": 1,
+            "id": "flask"
+        },
+        {
+            "label": "Django",
+            "x": 0.4,
+            "y": -2.5,
+            "size": 1,
+            "id": "django"
+        },
+        {
+            "label": "NodeJS",
+            "x": -0.1,
+            "y": -2.3,
+            "size": 1,
+            "id": "nodejs"
+        },
+        {
+            "label": "",
+            "x": 5,
+            "y": 1,
+            "size": 0,
+            "id": "border"
+        }
+    ],
+    "edges": [
+        {
+            "id": "game-unity3d",
+            "source": "game",
+            "target": "unity3d"
+        },
+        {
+            "id": "e0-0--2",
+            "source": "graphics",
+            "target": "game"
+        },
+        {
+            "id": "e0-0--3",
+            "source": "graphics",
+            "target": "opengl"
+        },
+        {
+            "id": "e0-0--4",
+            "source": "graphics",
+            "target": "directx"
+        },
+        {
+            "id": "e0-0--5",
+            "source": "graphics",
+            "target": "metal"
+        },
+        {
+            "id": "e0-0-10",
+            "source": "application",
+            "target": "android"
+        },
+        {
+            "id": "e0-0-11",
+            "source": "application",
+            "target": "ios"
+        },
+        {
+            "id": "e0-0-111",
+            "source": "application",
+            "target": "windows"
+        },
+        {
+            "id": "e0-0-112",
+            "source": "application",
+            "target": "web"
+        },
+        {
+            "id": "e1-0",
+            "source": "mathematics",
+            "target": "category"
+        },
+        {
+            "id": "e1-1",
+            "source": "mathematics",
+            "target": "topology"
+        },
+        {
+            "id": "e2-2",
+            "source": "microservices",
+            "target": "application"
+        },
+        {
+            "id": "e2-3",
+            "source": "microservices",
+            "target": "docker"
+        },
+        {
+            "id": "e2-4",
+            "source": "microservices",
+            "target": "kubernetes"
+        },
+        {
+            "id": "e2-4-0",
+            "source": "docker",
+            "target": "kubernetes"
+        },
+        {
+            "id": "e2-5",
+            "source": "microservices",
+            "target": "database"
+        },
+        {
+            "id": "e3-1",
+            "source": "database",
+            "target": "nosql"
+        },
+        {
+            "id": "e3-2",
+            "source": "database",
+            "target": "rdbms"
+        },
+        {
+            "id": "e3-3",
+            "source": "database",
+            "target": "graph"
+        },
+        {
+            "id": "e3-3-0",
+            "source": "mathematics",
+            "target": "linearalgebra"
+        },
+        {
+            "id": "e3-4",
+            "source": "linearalgebra",
+            "target": "game"
+        },
+        {
+            "id": "e3-6",
+            "source": "linearalgebra",
+            "target": "game"
+        },
+        {
+            "id": "e3-7",
+            "source": "automation",
+            "target": "gradle"
+        },
+        {
+            "id": "e3-8",
+            "source": "automation",
+            "target": "unity3d"
+        },
+        {
+            "id": "e3-9",
+            "source": "automation",
+            "target": "application"
+        },
+        {
+            "id": "e4-0-0",
+            "source": "microservices",
+            "target": "server"
+        },
+        {
+            "id": "e4-0",
+            "source": "server",
+            "target": "grpc"
+        },
+        {
+            "id": "e4-1",
+            "source": "server",
+            "target": "flask"
+        },
+        {
+            "id": "e4-2",
+            "source": "server",
+            "target": "django"
+        },
+        {
+            "id": "e4-3",
+            "source": "server",
+            "target": "nodejs"
+        },
+        {
+            "id": "e4-4",
+            "source": "server",
+            "target": "go"
+        },
+        {
+            "id": "e5",
+            "source": "graph",
+            "target": "dgraph"
+        },
+        {
+            "id": "e5-0",
+            "source": "graph",
+            "target": "arangodb"
+        },
+        {
+            "id": "e5-1",
+            "source": "nosql",
+            "target": "firestore"
+        },
+        {
+            "id": "e5-2",
+            "source": "nosql",
+            "target": "redis"
+        },
+        {
+            "id": "e5-3",
+            "source": "category",
+            "target": "haskell"
+        },
+        {
+            "id": "e5-4",
+            "source": "cloud",
+            "target": "firebase"
+        },
+        {
+            "id": "e5-5",
+            "source": "kubernetes",
+            "target": "firebase"
+        },
+        {
+            "id": "e5-6",
+            "source": "firestore",
+            "target": "firebase"
+        },
+        {
+            "id": "e5-7",
+            "source": "pythonanywhere",
+            "target": "cloud"
+        }
+    ]
+}

@@ -4,6 +4,7 @@ import './App.scss';
 import { Cell, Grid, Row } from '@material/react-layout-grid';
 import MyCard from "./MyCard";
 import MyHeader from "./MyHeader";
+import MyGraph from "./MyGraph";
 
 function App() {
   return (
@@ -12,13 +13,13 @@ function App() {
         <Cell columns={12}><MyHeader /></Cell>
       </Row>
       <Row>
-        <Cell columns={3}><MyCard/></Cell>
-        <Cell columns={3}><MyCard/></Cell>
-        <Cell columns={3}><MyCard/></Cell>
-        <Cell columns={3}><MyCard/></Cell>
+        <Cell columns={3}><MyCard /></Cell>
+        <Cell columns={3}><MyCard /></Cell>
+        <Cell columns={3}><MyCard /></Cell>
+        <Cell columns={3}><MyCard /></Cell>
       </Row>
       <Row>
-        <Cell columns={12}>Tennis</Cell>
+        <Cell columns={12}><MyGraph /></Cell>
       </Row>
     </Grid>
   );

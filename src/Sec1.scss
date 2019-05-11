@@ -4,10 +4,12 @@
   //   default-margin: 16px;
 }
 #title {
-  color: rgb(36, 34, 54);
+  color: rgb(255, 230, 0);
+  // color: rgb(11, 16, 77);
 }
 .MyCard {
   text-align: center;
+  @include mdc-card-shape-radius(8px, false);
 }
 .green {
     @include mdc-card-fill-color(mediumspringgreen);
@@ -19,11 +21,12 @@
     @include mdc-card-fill-color(deeppink);
 }
 .MyCard p {
-  color: rgb(81, 80, 99);
+  color: rgb(33, 30, 36);
 }
 .MyCardMedia {
   //   @include mdc-card-media-aspect-ratio(16, 5);
   height: 80px;
+  overflow: hidden;
 }
 .MyCardMedia .MediaDiv {
   display: flex;
@@ -31,7 +34,9 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  color: rgb(0, 0, 0);
-  background-color: rgb(190, 190, 190);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   opacity: 0.7;
+  // clip: auto;
+  // border-radius: 5px;
 }

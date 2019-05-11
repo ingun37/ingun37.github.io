@@ -9,7 +9,7 @@ import Card, {
     CardActionIcons
 } from "@material/react-card";
 
-class Sec1 extends React.Component {
+class MyGrid extends React.Component {
     renderCell(width, color, img, title, desc) {
         return (
             <Cell columns={width}>
@@ -29,9 +29,11 @@ class Sec1 extends React.Component {
     }
     render() {
         return (
-            <Grid className="Sec1">
+            <div className="MyGrid">
+
+            <Grid>
                 <Row>
-                    <Cell columns={12}><h1 id="title">Ingun Jun</h1></Cell>
+                    <Cell columns={12}><h1 id="title">WHO AM I?</h1></Cell>
                 </Row>
                 <Row>
                     {this.renderCell(4, 'green', "bridge", "Global", "전 세계 개발자들과의 활발한 소통")}
@@ -41,6 +43,22 @@ class Sec1 extends React.Component {
                     {this.renderCell(6, 'pink', "sword", "Young Jedi", "12년의 경험: 꼬마시절부터 걷기시작한 개발자의 길")}
                 </Row>
             </Grid>
+            </div>
+        );
+    }
+}
+function MyBG() {
+    return (
+      <div className="MyBG"></div>
+    )
+  }
+class Sec1 extends React.Component {
+    render() {
+        return (
+            <div>
+            <MyBG/>
+            <MyGrid />
+            </div>
         );
     }
 }

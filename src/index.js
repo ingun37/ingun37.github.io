@@ -6,13 +6,14 @@ import * as serviceWorker from './serviceWorker';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import Sec1 from "./Sec1";
+
 const Fullpage = () => (
   <ReactFullpage
     sectionsColor={["rgb(11, 16, 77)", "rgb(240, 245, 169)", "#0798ec"]}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">
+          <div className="section sectionDiv">
             <Sec1/>
           </div>
           <div className="section">

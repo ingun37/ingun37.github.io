@@ -8,7 +8,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Sec1 from "./Sec1";
 const Fullpage = () => (
   <ReactFullpage
-    sectionsColor={["rgb(20, 24, 59)", "#ff5f45", "#0798ec"]}
+    sectionsColor={["rgb(220, 224, 255)", "#ff5f45", "#0798ec"]}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>

@@ -6,25 +6,23 @@ class PortraitGrid extends React.Component {
     render() {
         const svgpath = process.env.PUBLIC_URL + '/face.svg'
         return (
-            <div className="PortraitGrid" >
-                <Grid>
-                    <Row>
-                        <Cell columns="12">
-                            <h1>WHO IS THIS GUY?</h1>
-                        </Cell>
-                    </Row>
-                    <Row>
-                        <Cell columns="12">
-                                <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }}/>
-                        </Cell>
-                    </Row>
-                    <Row>
-                        <Cell columns="12">
-                            <h1>INGUN JON?</h1>
-                        </Cell>
-                    </Row>
-                </Grid>
-            </div>
+            <Grid className="PortraitGrid">
+                <Row>
+                    <Cell columns="12">
+                        <h1>WHO ARE YOU</h1>
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell columns="12">
+                        <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }} />
+                    </Cell>
+                </Row>
+                <Row>
+                    <Cell columns="12">
+                        <h1>INGUN JON?</h1>
+                    </Cell>
+                </Row>
+            </Grid>
         );
     }
 }
@@ -32,7 +30,7 @@ class PortraitGrid extends React.Component {
 class PortraitSec extends React.Component {
     render() {
         return (
-                <PortraitGrid/>
+            <PortraitGrid />
         );
     }
 }

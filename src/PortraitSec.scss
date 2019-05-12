@@ -2,10 +2,14 @@
 
 .PortraitGrid {
     text-align: center;
+    min-height: 200px;
     font-family: 'Anton', sans-serif;
 }
 .PortraitGrid h1 {
-    color: rgb(236, 233, 181)
+    color: rgb(26, 16, 163);
+    font-size: 3em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 
@@ -13,7 +17,7 @@
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
-    height: 200px;
-    // width: 200px;
-    background-color: gray;
+    min-height: 200px;
+    height: 40vh;
+    background-color: rgb(36, 36, 36);
   }

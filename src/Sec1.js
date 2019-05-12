@@ -18,11 +18,9 @@ class MyGrid extends React.Component {
                     <CardMedia className="MyCardMedia" imageUrl={process.env.PUBLIC_URL + `/${img}.svg`}>
                         <div className="MediaDiv">
                             <h2>{title}</h2>
+                            <p>{desc}</p>
                         </div>
                     </CardMedia>
-                    <CardPrimaryContent>
-                        <p>{desc}</p>
-                    </CardPrimaryContent>
 
                 </Card>
             </Cell>

@@ -9,15 +9,15 @@ import Sec1 from "./Sec1";
 
 const Fullpage = () => (
   <ReactFullpage
-    sectionsColor={["rgb(11, 16, 77)", "rgb(240, 245, 169)", "#0798ec"]}
+    sectionsColor={["rgb(240, 245, 169)", "rgb(11, 16, 77)", "#0798ec"]}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
           <div className="section sectionDiv">
-            <Sec1/>
+            <p>Section 2</p>
           </div>
           <div className="section">
-            <p>Section 2</p>
+            <Sec1/>
           </div>
         </ReactFullpage.Wrapper>
       );

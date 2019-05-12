@@ -5,7 +5,8 @@ import './index.scss';
 import * as serviceWorker from './serviceWorker';
 
 import ReactFullpage from '@fullpage/react-fullpage';
-import Sec1 from "./Sec1";
+import FeaturesSec from "./FeaturesSec";
+import PortraitSec from "./PortraitSec";
 import posed from "react-pose";
 const deg180 = 180
 const deg0 = 0
@@ -23,11 +24,11 @@ const RotatingDiv = posed.div({
 });
 
 class App extends React.Component {
-  state = { cityDeg: deg0, skyColor: dayColor}
+  state = { cityDeg: deg0, skyColor: dayColor }
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
-      this.setState({ cityDeg: deg180,  skyColor: nightColor  })
+      this.setState({ cityDeg: deg180, skyColor: nightColor })
     } else if (origin.index == 1 && destination.index == 0) {
       this.setState({ cityDeg: deg0, skyColor: dayColor })
     }
@@ -40,9 +41,9 @@ class App extends React.Component {
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
         <RotatingDiv className="RotatingDiv MyBG"
-          pose={this.state.cityDeg.toString()} 
+          pose={this.state.cityDeg.toString()}
           style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}
-          />
+        />
         <ReactFullpage
           onLeave={this.onLeave.bind(this)}
 
@@ -50,10 +51,10 @@ class App extends React.Component {
             return (
               <ReactFullpage.Wrapper>
                 <div className="section">
-                  <p>Section 2</p>
+                  <PortraitSec />
                 </div>
                 <div className="section">
-                  <Sec1 />
+                  <FeaturesSec />
                 </div>
               </ReactFullpage.Wrapper>
             );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cell, Grid, Row } from '@material/react-layout-grid';
-import "./Sec1.scss"
+import "./FeaturesSec.scss"
 import Card, {
     CardPrimaryContent,
     CardMedia,
@@ -46,7 +46,7 @@ class MyGrid extends React.Component {
     }
 }
 
-class Sec1 extends React.Component {
+class FeaturesSec extends React.Component {
     render() {
         return (
             <div>
@@ -59,4 +59,4 @@ class Sec1 extends React.Component {
     }
 }
 
-export default Sec1;
+export default FeaturesSec;

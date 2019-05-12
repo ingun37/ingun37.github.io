@@ -51,7 +51,7 @@ class Sec1 extends React.Component {
         const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
         return (
             <div>
-                <div className="MyBG" style={{ "maskImage": citysvgURL, "-webkit-mask-image": citysvgURL }}></div>
+                <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
                 <div>
                     <h1 className="title">I BE LIKE</h1>
                     <div className="gridWrapper">

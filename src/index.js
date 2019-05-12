@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -25,7 +25,15 @@ const Fullpage = () => (
   />
 );
 
-ReactDOM.render(<Fullpage />, document.getElementById('root'));
+function App() {
+  return (
+    <div>
+      <Fullpage/>
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 

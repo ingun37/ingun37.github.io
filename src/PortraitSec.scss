@@ -3,7 +3,18 @@
 .PortraitGrid {
     text-align: center;
     font-family: 'Anton', sans-serif;
+    max-width: 300px;
 }
 .PortraitGrid h1 {
     color: rgb(236, 233, 181)
 }
+
+
+.PortraitImage {
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    height: 200px;
+    // width: 200px;
+    background-color: gray;
+  }

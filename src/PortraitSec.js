@@ -4,6 +4,7 @@ import "./PortraitSec.scss"
 
 class PortraitGrid extends React.Component {
     render() {
+        const svgpath = process.env.PUBLIC_URL + '/face.svg'
         return (
             <div className="PortraitGrid">
                 <Grid>
@@ -14,7 +15,7 @@ class PortraitGrid extends React.Component {
                     </Row>
                     <Row>
                         <Cell columns="12">
-                            <div></div>
+                                <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }}/>
                         </Cell>
                     </Row>
                     <Row>
@@ -31,7 +32,7 @@ class PortraitGrid extends React.Component {
 class PortraitSec extends React.Component {
     render() {
         return (
-            <PortraitGrid/>
+                <PortraitGrid/>
         );
     }
 }

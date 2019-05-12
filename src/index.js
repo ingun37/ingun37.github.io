@@ -9,15 +9,14 @@ import Sec1 from "./Sec1";
 
 const Fullpage = () => (
   <ReactFullpage
-    sectionsColor={["rgb(240, 245, 169)", "rgb(11, 16, 77)", "#0798ec"]}
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section" >
+          <div className="section">
             <p>Section 2</p>
           </div>
-          <div className="section" style={{"zIndex":-2}}>
-            <Sec1/>
+          <div className="section">
+            <Sec1 />
           </div>
         </ReactFullpage.Wrapper>
       );
@@ -26,9 +25,11 @@ const Fullpage = () => (
 );
 
 function App() {
+  const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
   return (
-    <div>
-      <Fullpage/>
+    <div className="App">
+      <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
+      <Fullpage />
     </div>
   )
 }

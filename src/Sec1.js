@@ -48,10 +48,8 @@ class MyGrid extends React.Component {
 
 class Sec1 extends React.Component {
     render() {
-        const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
         return (
             <div>
-                <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
                 <div>
                     <h1 className="title">I BE LIKE</h1>
                     <div className="gridWrapper">

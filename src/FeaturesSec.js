@@ -15,15 +15,12 @@ class MyGrid extends React.Component {
         return (
             <Cell columns={width} tabletColumns={12} phoneColumns={12}>
                 <Card className={`MyCard ${color}`} >
-                    <CardMedia className="MyCardMedia" imageUrl={process.env.PUBLIC_URL + `/${img}.svg`}>
-                        <div className="MediaDiv">
-                            <div className="blackDiv">
-                                <h2>{title}</h2>
-                                <p>{desc}</p>
-                            </div>
+                    <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{height:"100%"}}>
+                        <div className="blackDiv">
+                            <h2>{title}</h2>
+                            <p>{desc}</p>
                         </div>
                     </CardMedia>
-
                 </Card>
             </Cell>
         );

@@ -13,7 +13,7 @@ import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-reac
 class MyGrid extends React.Component {
     renderCell(width, color, img, title, desc) {
         return (
-            <Cell columns={width}>
+            <Cell columns={width} tabletColumns={12} phoneColumns={12}>
                 <Card className={`MyCard ${color}`} >
                     <CardMedia className="MyCardMedia" imageUrl={process.env.PUBLIC_URL + `/${img}.svg`}>
                         <div className="MediaDiv">
@@ -55,8 +55,11 @@ function MyBG() {
 class Sec1 extends React.Component {
     render() {
         return (
-            <div className="Sec1">
-                <MyGrid />
+            <div>
+                <h1 className="title">I BE LIKE...</h1>
+                <div className="gridWrapper">
+                    <MyGrid />
+                </div>
             </div>
         );
     }

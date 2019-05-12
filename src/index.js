@@ -37,7 +37,6 @@ class App extends React.Component {
 
   render() {
     const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
-
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
         <RotatingDiv className="RotatingDiv MyBG"

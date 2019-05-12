@@ -6,7 +6,7 @@ class PortraitGrid extends React.Component {
     render() {
         const svgpath = process.env.PUBLIC_URL + '/face.svg'
         return (
-            <div className="PortraitGrid">
+            <div className="PortraitGrid" >
                 <Grid>
                     <Row>
                         <Cell columns="12">

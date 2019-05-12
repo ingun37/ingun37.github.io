@@ -9,6 +9,8 @@ run `export SASS_PATH=./node_modules` before npm start
 3. convert using `pdf2svg <input pdf> <output svg>` https://github.com/dawbarton/pdf2svg
 4. compress using `svgo <path to svg>' https://github.com/svg/svgo
 
+###
+can't make `section` to be flex. styling as flex won't work.
 ## Available Scripts
 
 In the project directory, you can run:

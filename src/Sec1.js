@@ -53,7 +53,7 @@ class Sec1 extends React.Component {
             <div>
                 <div className="MyBG" style={{ "maskImage": citysvgURL, "-webkit-mask-image": citysvgURL }}></div>
                 <div>
-                    <h1 className="title">I BE LIKE...</h1>
+                    <h1 className="title">I BE LIKE</h1>
                     <div className="gridWrapper">
                         <MyGrid />
                     </div>

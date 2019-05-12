@@ -6,32 +6,47 @@ import * as serviceWorker from './serviceWorker';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import Sec1 from "./Sec1";
+import posed from "react-pose";
 
-const Fullpage = () => (
-  <ReactFullpage
-    render={({ state, fullpageApi }) => {
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <p>Section 2</p>
-          </div>
-          <div className="section">
-            <Sec1 />
-          </div>
-        </ReactFullpage.Wrapper>
-      );
-    }}
-  />
-);
 
-function App() {
-  const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
-  return (
-    <div className="App">
-      <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
-      <Fullpage />
-    </div>
-  )
+const RotatingDiv = posed.div({
+  rotated: { rotate: 720, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  unrotated: { rotate: 0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } }
+});
+
+class App extends React.Component {
+
+  onLeave(origin, destination, direction) {
+    console.log('onLeave', { origin, destination, direction });
+    // arguments are mapped in order of fullpage.js callback arguments do something
+    // with the event
+  }
+
+  render() {
+    const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
+
+    return (
+      <div className="App">
+        <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
+        <ReactFullpage
+          onLeave={this.onLeave.bind(this)}
+
+          render={({ state, fullpageApi }) => {
+            return (
+              <ReactFullpage.Wrapper>
+                <div className="section">
+                  <p>Section 2</p>
+                </div>
+                <div className="section">
+                  <Sec1 />
+                </div>
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      </div>
+    );
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));

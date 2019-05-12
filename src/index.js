@@ -10,16 +10,15 @@ import posed from "react-pose";
 
 
 const RotatingDiv = posed.div({
-  rotated: { rotate: 720, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  rotated: { rotate: 180, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
   unrotated: { rotate: 0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } }
 });
 
 class App extends React.Component {
-
+  state = {isRotated : false}
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
+    this.setState({isRotated : !this.state.isRotated})
   }
 
   render() {
@@ -27,7 +26,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <div className="MyBG" style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}></div>
+        <RotatingDiv className="RotatingDiv MyBG" pose={this.state.isRotated ? "rotated" : "unrotated"} style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}>
+        </RotatingDiv>
         <ReactFullpage
           onLeave={this.onLeave.bind(this)}
 

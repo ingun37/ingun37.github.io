@@ -50,11 +50,9 @@ class Sec1 extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <h1 className="title">I BE LIKE</h1>
-                    <div className="gridWrapper">
-                        <MyGrid />
-                    </div>
+                <h1 className="title">I BE LIKE</h1>
+                <div className="gridWrapper">
+                    <MyGrid />
                 </div>
             </div>
         );

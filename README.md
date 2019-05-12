@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### IMPORTANT
+run `export SASS_PATH=./node_modules` before npm start
+
+### Process for creating svg
+1. adobe illustrator
+2. export to pdf
+3. convert using `pdf2svg <input pdf> <output svg>` https://github.com/dawbarton/pdf2svg
+4. compress using `svgo <path to svg>' https://github.com/svg/svgo
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -67,4 +76,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-run `export SASS_PATH=./node_modules` before npm start

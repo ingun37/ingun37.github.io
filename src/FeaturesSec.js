@@ -28,7 +28,6 @@ class MyGrid extends React.Component {
     render() {
         return (
             <div className="MyGrid">
-
                 <Grid>
                     <Row>
                         {this.renderCell(4, 'green', "bridge", "Global", "전 세계 개발자들과의 활발한 소통")}

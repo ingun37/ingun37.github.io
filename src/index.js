@@ -7,9 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import ReactFullpage from '@fullpage/react-fullpage';
 import FeaturesSec from "./FeaturesSec";
 import PortraitSec from "./PortraitSec";
+import Coverage from "./Coverage";
 import posed from "react-pose";
-const deg180 = 180
-const deg0 = 0
+
 const dayColor = "rgb(218, 199, 30)"
 const nightColor = "rgb(11, 16, 77)"
 
@@ -19,20 +19,26 @@ const SkyDiv = posed.div({
 })
 
 const RotatingDiv = posed.div({
-  [deg0.toString()]: { rotate: deg0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
-  [deg180.toString()]: { rotate: deg180, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } }
+  unrotated: { scale:1, rotate: 0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  rotated: { scale:1, rotate: 180, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  disappeared: { scale:0, rotate: 360, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
 });
 
 class App extends React.Component {
-  state = { cityDeg: deg0, skyColor: dayColor }
+  state = { cityState: 'unrotated', skyColor: dayColor }
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
-      this.setState({ cityDeg: deg180, skyColor: nightColor })
+      this.setState({ cityState: 'rotated', skyColor: nightColor })
     } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ cityDeg: deg0, skyColor: dayColor })
+      this.setState({ cityState: 'unrotated', skyColor: dayColor })
     }
 
+    if (origin.index == 1 && destination.index == 2) {
+      this.setState({ cityState: 'disappeared', skyColor: nightColor })
+    } else if (origin.index == 2 && destination.index == 1) {
+      this.setState({ cityState: 'rotated', skyColor: nightColor })
+    }
   }
 
   render() {
@@ -40,7 +46,7 @@ class App extends React.Component {
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
         <RotatingDiv className="RotatingDiv MyBG"
-          pose={this.state.cityDeg.toString()}
+          pose={this.state.cityState}
           style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}
         />
         <ReactFullpage
@@ -49,11 +55,14 @@ class App extends React.Component {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section">
+                <div className="section" style={{zIndex:-2}}>
                   <PortraitSec />
                 </div>
                 <div className="section">
                   <FeaturesSec />
+                </div>
+                <div className="section">
+                  <Coverage />
                 </div>
               </ReactFullpage.Wrapper>
             );

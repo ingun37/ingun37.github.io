@@ -25,17 +25,17 @@
 }
 
 .MyCard .blackDiv {
-  margin-top: 10.5px;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // width: 100%;
+  width: 100%;
   color: rgb(233, 229, 16);
   background-color: rgb(0, 0, 0);
   opacity: 0.7;
-
-  // margin-top: 8px;
+  height: 90px;//.MyCard's height is fixed.
+  margin-top: 10px;
   // margin-bottom: 8px;
 }
 

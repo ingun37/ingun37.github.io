@@ -1,15 +1,14 @@
 import React from 'react';
 import "./Writes.scss"
 import "./cards.scss"
-import IconButton, { IconToggle } from '@material/react-icon-button';
+import "./contentpanel.scss"
+import IconButton from '@material/react-icon-button';
 import MaterialIcon from '@material/react-material-icon';
 import Card, {
     CardPrimaryContent,
     CardMedia,
-    CardActions,
-    CardActionButtons,
-    CardActionIcons
 } from "@material/react-card";
+
 let Parser = require('rss-parser');
 let parser = new Parser({
     customFields: {
@@ -43,8 +42,9 @@ class WritesGrid extends React.Component {
             })
         })();
     }
-    onCardClick(e) {
-        console.log(e)
+    onCardClick(idx) {
+        const url = this.state.items[idx].link;
+        window.open(url, '_blank');
     }
     onMoreClick() {
         const url = 'https://ingun37.wordpress.com';
@@ -53,7 +53,7 @@ class WritesGrid extends React.Component {
     renderCell(idx, img, title, date) {
         return (
             <Card key={idx.toString()} className='writecard roundcard'>
-                <CardPrimaryContent onClick={this.onCardClick}>
+                <CardPrimaryContent onClick={() => this.onCardClick(idx)}>
                     <CardMedia square imageUrl={img} />
                     <span className='writetitle'>{title}</span>
                     <span className='writedate'>{date}</span>
@@ -66,7 +66,7 @@ class WritesGrid extends React.Component {
             <div className='horizdiv'>
                 {this.state.items.map((item, idx) => this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)))}
                 <div className='morediv'>
-                    <h1 className='moretitle'>check out more!</h1>
+                    <h1 className='moretitle'>CHECK OUT MORE</h1>
                     <IconButton className='morebutton' onClick={this.onMoreClick}>
                         <MaterialIcon className='moreicon' icon='forward' />
                     </IconButton>
@@ -79,9 +79,11 @@ class WritesGrid extends React.Component {
 class Writes extends React.Component {
     render() {
         return (
-            <div className="Writes">
-                <h1 className='title'>I WRITE THINGS</h1>
-                <WritesGrid />
+            <div>
+                <h1 className='sectiontitle'>I WRITE THINGS</h1>
+                <div className="Writes contentpanel">
+                    <WritesGrid />
+                </div>
             </div>
         );
     }

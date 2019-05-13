@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Coverage.scss"
+import "./contentpanel.scss"
 import { Sigma, RandomizeNodePositions, RelativeSize, LoadJSON } from 'react-sigma';
 import { Cell, Grid, Row } from '@material/react-layout-grid';
 
@@ -15,8 +16,8 @@ class Coverage extends React.Component {
         }
         return (
             <div className="Coverage">
-                <h1>COVERAGE</h1>
-                <div style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                <h1 className="sectiontitle">COVERAGE</h1>
+                <div className="contentpanel coveragepanel">
                     <Sigma settings={setting} >
                         <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
                     </Sigma>

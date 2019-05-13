@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cell, Grid, Row } from '@material/react-layout-grid';
 import "./FeaturesSec.scss"
+import "./contentpanel.scss"
 import "./cards.scss"
 import Card, {
     CardPrimaryContent,
@@ -47,8 +48,8 @@ class FeaturesSec extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="title">I BE LIKE</h1>
-                <div className="gridWrapper">
+                <h1 className="sectiontitle">I BE LIKE</h1>
+                <div className="gridWrapper contentpanel">
                     <MyGrid />
                 </div>
             </div>

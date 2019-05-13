@@ -13,10 +13,14 @@ import posed from "react-pose";
 
 const dayColor = "rgb(218, 199, 30)"
 const nightColor = "rgb(11, 16, 77)"
+const coverageColor = 'rgb(226, 139, 153)'
+const skyblueColor = 'rgb(141, 191, 211)'
 
 const SkyDiv = posed.div({
   [dayColor]: { backgroundColor: dayColor },
   [nightColor]: { backgroundColor: nightColor },
+  [coverageColor]: { backgroundColor: coverageColor },
+  [skyblueColor]: { backgroundColor: skyblueColor },
 })
 
 const RotatingDiv = posed.div({
@@ -54,9 +58,15 @@ class App extends React.Component {
     }
 
     if (origin.index == 1 && destination.index == 2) {
-      this.setState({ cityState: 'disappeared', compassState: 'visible' })
+      this.setState({ cityState: 'disappeared', compassState: 'visible', skyColor: coverageColor })
     } else if (origin.index == 2 && destination.index == 1) {
-      this.setState({ cityState: 'rotated', compassState: 'hidden' })
+      this.setState({ cityState: 'rotated', compassState: 'hidden', skyColor: nightColor })
+    }
+
+    if (origin.index == 2 && destination.index == 3) {
+      this.setState({ skyColor: skyblueColor })
+    } else if (origin.index == 3 && destination.index == 2) {
+      this.setState({ skyColor: coverageColor })
     }
   }
 

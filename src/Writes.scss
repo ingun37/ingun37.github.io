@@ -5,14 +5,7 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 // <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 //       rel="stylesheet">
-.Writes .title {
-  font-family: "Anton", sans-serif;
-  color: rgb(233, 229, 16);
-  font-size: 3em;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  text-align: center;
-}
+
 .horizdiv {
   display: flex;
   align-items: center;
@@ -23,6 +16,8 @@
 }
 .writecard {
   margin-left: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .writecard .writetitle {
@@ -58,6 +53,7 @@
 .moretitle {
   width:200px;
   color: rgb(235, 232, 202);
+  margin: 0px;
   text-align: center;
 }
 .morebutton {

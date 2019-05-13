@@ -246,13 +246,6 @@
             "id": "gradle"
         },
         {
-            "label": "Shell",
-            "x": 4,
-            "y": -2.8,
-            "size": 1,
-            "id": "shell"
-        },
-        {
             "label": "Server",
             "x": 0.5,
             "y": -2,

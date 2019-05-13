@@ -44,13 +44,14 @@ class WritesGrid extends React.Component {
     onCardClick(e) {
         console.log(e)
     }
-    renderCell(idx, img, title) {
+    renderCell(idx, img, title, date) {
         return (
             <Cell columns={3} key={idx.toString()}>
                 <Card className='writecard'>
                     <CardPrimaryContent onClick={this.onCardClick}>
                         <CardMedia square imageUrl={img}/>                            
                         <span className='writetitle'>{title}</span>
+                        <span className='writedate'>{date}</span>
                     </CardPrimaryContent>
                 </Card>
             </Cell>
@@ -60,7 +61,7 @@ class WritesGrid extends React.Component {
         return (
             <Grid>
                 <Row>
-                    {this.state.items.map((item, idx)=>this.renderCell(idx, item.thumbnail, item.title))}
+                    {this.state.items.map((item, idx)=>this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0,'Tue, 02 Apr 2019'.length)))}
                 </Row>
             </Grid>
         );

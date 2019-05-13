@@ -12,12 +12,25 @@
   margin-bottom: 0em;
   text-align: center;
 }
+
 .writecard .writetitle {
   text-overflow: ellipsis;
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 4px;
   font-weight: bold;
+  color: rgb(54, 54, 54);
+  // white-space: nowrap;
+  // word-wrap: break-word;
+  // display: block;
+  // width:100%;
+}
+.writecard .writedate {
+  text-overflow: ellipsis;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  font-size: 0.8em;
   color: rgb(54, 54, 54);
   // white-space: nowrap;
   // word-wrap: break-word;

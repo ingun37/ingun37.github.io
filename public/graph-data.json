@@ -286,13 +286,6 @@
             "y": -2.3,
             "size": 1,
             "id": "nodejs"
-        },
-        {
-            "label": "",
-            "x": 5,
-            "y": 1,
-            "size": 0,
-            "id": "border"
         }
     ],
     "edges": [

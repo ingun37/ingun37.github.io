@@ -19,13 +19,31 @@ const SkyDiv = posed.div({
 })
 
 const RotatingDiv = posed.div({
-  unrotated: { scale:1, rotate: 0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
-  rotated: { scale:1, rotate: 180, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
-  disappeared: { scale:0, rotate: 360, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  unrotated: { scale: 1, rotate: 0, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  rotated: { scale: 1, rotate: 180, transition: { type: 'spring', ease: 'easeInOut', duration: 1000 } },
+  disappeared: { scale: 0, rotate: 360, transition: { ease: 'linear', duration: 500 } },
+});
+
+const CompassDiv = posed.div({
+  visible: {
+    scale: 1, rotate: 180,
+    transition: {
+      scale: {
+        ease:'linear',
+        duration: 500
+      },
+      rotate: {
+        ease: 'easeInOut',
+        duration: 40000
+      }
+    }
+  },
+  hidden: { scale: 0, rotate: 0, transition: { ease: 'linear', duration: 500 } },
 });
 
 class App extends React.Component {
-  state = { cityState: 'unrotated', skyColor: dayColor }
+  state = { cityState: 'unrotated', skyColor: dayColor, compassState: 'hidden' }
+
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
@@ -35,19 +53,24 @@ class App extends React.Component {
     }
 
     if (origin.index == 1 && destination.index == 2) {
-      this.setState({ cityState: 'disappeared', skyColor: nightColor })
+      this.setState({ cityState: 'disappeared', compassState: 'visible' })
     } else if (origin.index == 2 && destination.index == 1) {
-      this.setState({ cityState: 'rotated', skyColor: nightColor })
+      this.setState({ cityState: 'rotated', compassState: 'hidden' })
     }
   }
 
   render() {
     const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
+    const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
-        <RotatingDiv className="RotatingDiv MyBG"
+        <RotatingDiv className="MyBG"
           pose={this.state.cityState}
-          style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL }}
+          style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL, backgroundColor: 'rgb(223, 29, 62)' }}
+        />
+        <CompassDiv className="MyBG"
+          pose={this.state.compassState}
+          style={{ "maskImage": compasssvgURL, "WebkitMaskImage": compasssvgURL, backgroundColor: 'rgb(223, 29, 62)', opacity: 0.2 }}
         />
         <ReactFullpage
           onLeave={this.onLeave.bind(this)}
@@ -55,7 +78,7 @@ class App extends React.Component {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section" style={{zIndex:-2}}>
+                <div className="section" style={{ zIndex: -2 }}>
                   <PortraitSec />
                 </div>
                 <div className="section">

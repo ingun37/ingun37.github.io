@@ -10,14 +10,17 @@ class Coverage extends React.Component {
             defaultNodeColor: 'rgb(233, 229, 16)',
             defaultLabelColor: 'rgb(236, 194, 210)',
             mouseEnabled: false,
-            touchEnabled: false
+            touchEnabled: false,
+            sideMargin: 0.6,
         }
         return (
             <div className="Coverage">
                 <h1>COVERAGE</h1>
-                <Sigma settings={setting}>
-                    <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
-                </Sigma>
+                <div style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                    <Sigma settings={setting} >
+                        <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
+                    </Sigma>
+                </div>
             </div>
         );
     }

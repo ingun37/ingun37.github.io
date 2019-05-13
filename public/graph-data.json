@@ -51,10 +51,24 @@
         },
         {
             "label": "Web",
-            "x": 2.1,
-            "y": -2.7,
+            "x": 2.2500943556824042,
+            "y": -2.0871635734152463,
             "size": 1,
             "id": "web"
+        },
+        {
+            "label": "Angular",
+            "x": 1.9689240356630036,
+            "y": -1.7934967947283167,
+            "size": 1,
+            "id": "angular"
+        },
+        {
+            "label": "React",
+            "x": 2.3875554010252227,
+            "y": -1.7060215840556143,
+            "size": 1,
+            "id": "react"
         },
         {
             "label": "iOS",
@@ -72,8 +86,8 @@
         },
         {
             "label": "Windows",
-            "x": 2.1,
-            "y": -1.8,
+            "x": 2.0751439343369995,
+            "y": -2.580773690782638,
             "size": 1,
             "id": "windows"
         },
@@ -153,13 +167,6 @@
             "y": -1.5,
             "size": 2,
             "id": "firebase"
-        },
-        {
-            "label": "Python Anywhere",
-            "x": -1.7,
-            "y": -1.0,
-            "size": 2,
-            "id": "pythonanywhere"
         },
         {
             "label": "NoSQL",
@@ -335,6 +342,16 @@
             "target": "web"
         },
         {
+            "id": "e0-0-1124",
+            "source": "web",
+            "target": "angular"
+        },
+        {
+            "id": "e0-0-32",
+            "source": "web",
+            "target": "react"
+        },
+        {
             "id": "e1-0",
             "source": "mathematics",
             "target": "category"
@@ -483,11 +500,6 @@
             "id": "e5-6",
             "source": "firestore",
             "target": "firebase"
-        },
-        {
-            "id": "e5-7",
-            "source": "pythonanywhere",
-            "target": "cloud"
         }
     ]
 }

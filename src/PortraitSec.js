@@ -28,7 +28,7 @@ class PortraitGrid extends React.Component {
                 </Row>
                 <Row>
                     <Cell columns="12">
-                        <h1>ARE YOU INGUN JON?</h1>
+                        <h1>AM I?</h1>
                     </Cell>
                 </Row>
             </Grid>

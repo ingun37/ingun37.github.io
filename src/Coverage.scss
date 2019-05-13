@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
 
-.CoverageGrid {
-  text-align: center;
-  min-height: 200px;
-  font-family: "Anton", sans-serif;
-}
-.CoverageGrid h1 {
-  color: rgb(26, 16, 163);
+.Coverage h1 {
   font-size: 3em;
-  margin-top: 0em;
-  margin-bottom: 0em;
+
+  text-align: center;
+  color: rgb(233, 229, 16);
+  font-family: "Anton", sans-serif;
 }

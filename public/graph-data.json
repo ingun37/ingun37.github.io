@@ -57,6 +57,13 @@
             "id": "web"
         },
         {
+            "label": "WebGL",
+            "x": 2.2500943556824042,
+            "y": -1.0871635734152463,
+            "size": 2,
+            "id": "webgl"
+        },
+        {
             "label": "Angular",
             "x": 1.9689240356630036,
             "y": -1.7934967947283167,
@@ -495,6 +502,16 @@
             "id": "e5-6",
             "source": "firestore",
             "target": "firebase"
+        },
+        {
+            "id": "e5-7",
+            "source": "web",
+            "target": "webgl"
+        },
+        {
+            "id": "e5-8",
+            "source": "opengl",
+            "target": "webgl"
         }
     ]
 }

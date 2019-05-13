@@ -8,7 +8,7 @@ class Coverage extends React.Component {
         const setting = {
             labelThreshold: 0,
             defaultNodeColor: 'rgb(233, 229, 16)',
-            defaultLabelColor: 'rgb(255, 255, 255)',
+            defaultLabelColor: 'rgb(236, 194, 210)',
             mouseEnabled: false,
             touchEnabled: false
         }

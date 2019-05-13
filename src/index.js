@@ -8,6 +8,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import FeaturesSec from "./FeaturesSec";
 import PortraitSec from "./PortraitSec";
 import Coverage from "./Coverage";
+import Writes from "./Writes";
 import posed from "react-pose";
 
 const dayColor = "rgb(218, 199, 30)"
@@ -86,6 +87,9 @@ class App extends React.Component {
                 </div>
                 <div className="section">
                   <Coverage />
+                </div>
+                <div className="section">
+                  <Writes />
                 </div>
               </ReactFullpage.Wrapper>
             );

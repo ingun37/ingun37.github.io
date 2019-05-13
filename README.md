@@ -15,6 +15,10 @@ can't make `section` to be flex. styling as flex won't work.
 
 In the project directory, you can run:
 
+##when
+features card gets loss its color
+you mus be importing @import "@material/react-card/index.scss"; twice.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>

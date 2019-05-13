@@ -68,7 +68,7 @@ class WritesGrid extends React.Component {
                 {this.state.items.map((item, idx) => this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)))}
                 <div className='morediv'>
                     <h1 className='moretitle'></h1>
-                    <Button className='morebutton' raised={true} trailingIcon={<MaterialIcon icon='forward' />}>
+                    <Button className='morebutton' raised={true} trailingIcon={<MaterialIcon icon='forward' />} onClick={this.onMoreClick}>
                         SEE MORE
                     </Button>
                 </div>

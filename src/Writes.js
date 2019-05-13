@@ -8,15 +8,50 @@ import Card, {
     CardActionButtons,
     CardActionIcons
 } from "@material/react-card";
-
+let Parser = require('rss-parser');
+let parser = new Parser({
+    customFields: {
+        item: [
+            ['media:thumbnail', 'thumbnail'],
+            ['media:content', 'contents', { keepArray: true }],
+        ],
+    }
+});
+function unpackthum(item) {
+    try {
+        const th = ((item.thumbnail || {}).$ || {}).url || null;
+        if (th) return th;
+        return item.contents.map(c => (c.$ || {}).url).filter(u => u).find(u => u.includes('.png') || u.includes('.jpg')) || null
+    } catch (err) {
+        console.error(err)
+        return null
+    }
+}
 class WritesGrid extends React.Component {
-    renderCell(img, title, desc) {
+    state = { items: [] }
+    constructor(props) {
+        super(props);
+
+        (async () => {
+            let feed = await parser.parseURL(process.env.PUBLIC_URL + `/wordpress-rss.xml`);
+            let items = feed.items;
+            items.forEach(i=>i.thumbnail = unpackthum(i))
+            this.setState({
+                items: items.filter(i => i.thumbnail).slice(0, 6)
+            })
+        })();
+    }
+    onCardClick(e) {
+        console.log(e)
+    }
+    renderCell(idx, img, title) {
         return (
-            <Cell columns={4}>
-                <Card>
-                    <CardMedia imageUrl={img} />
-                    <h2>{title}</h2>
-                    <p>{desc}</p>
+            <Cell columns={3} key={idx.toString()}>
+                <Card className='writecard'>
+                    <CardPrimaryContent onClick={this.onCardClick}>
+                        <CardMedia square imageUrl={img}/>                            
+                        <span className='writetitle'>{title}</span>
+                    </CardPrimaryContent>
                 </Card>
             </Cell>
         );
@@ -25,10 +60,7 @@ class WritesGrid extends React.Component {
         return (
             <Grid>
                 <Row>
-                    {this.renderCell("", "Global", "전 세계 개발자들과의 활발한 소통")}
-                    {this.renderCell("", "Global", "전 세계 개발자들과의 활발한 소통")}
-                    {this.renderCell("", "Global", "전 세계 개발자들과의 활발한 소통")}
-                    {this.renderCell("", "Global", "전 세계 개발자들과의 활발한 소통")}
+                    {this.state.items.map((item, idx)=>this.renderCell(idx, item.thumbnail, item.title))}
                 </Row>
             </Grid>
         );
@@ -39,8 +71,8 @@ class Writes extends React.Component {
     render() {
         return (
             <div className="Writes">
-                <h1>I WRITE THINGS</h1>
-                <WritesGrid/>
+                <h1 className='title'>I WRITE THINGS</h1>
+                <WritesGrid />
             </div>
         );
     }

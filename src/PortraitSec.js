@@ -13,22 +13,18 @@ const RotatingDiv = posed.div({
 
 class PortraitGrid extends React.Component {
     render() {
-        const svgpath = process.env.PUBLIC_URL + '/face.svg'
         return (
             <Grid className="PortraitGrid">
                 <Row>
                     <Cell columns="12">
-                        <h1>WHAT KIND OF DEVELOPER</h1>
                     </Cell>
                 </Row>
                 <Row>
                     <Cell columns="12">
-                        <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }} />
                     </Cell>
                 </Row>
                 <Row>
                     <Cell columns="12">
-                        <h1>AM I?</h1>
                     </Cell>
                 </Row>
             </Grid>
@@ -44,14 +40,18 @@ class PortraitSec extends React.Component {
         }, 300);
     }
     render() {
-        const svgpath = process.env.PUBLIC_URL + '/sun.svg'
+        const svgpath = process.env.PUBLIC_URL + '/face.svg'
+
         return (
-            <div style={{overflow:'hidden'}}>
-                {/* <RotatingDiv pose={this.state.deg.toString()} className="Sun" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})`, zIndex: -1}} /> */}
-                <PortraitGrid />
+            <div className='PortraitSec'>
+                        <h1>JON IN GUN</h1>
+                        <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }} />
+                        <h1>WHO ARE YOU?</h1>
             </div>
         );
     }
 }
 
 export default PortraitSec;
+
+//{/* <RotatingDiv pose={this.state.deg.toString()} className="Sun" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})`, zIndex: -1}} /> */}

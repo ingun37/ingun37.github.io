@@ -409,12 +409,7 @@
         {
             "id": "e3-4",
             "source": "linearalgebra",
-            "target": "game"
-        },
-        {
-            "id": "e3-6",
-            "source": "linearalgebra",
-            "target": "game"
+            "target": "graphics"
         },
         {
             "id": "e3-7",

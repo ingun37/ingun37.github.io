@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
-@import "@material/react-card/index.scss";
+
 @import '@material/react-icon-button/index.scss';
 @import '@material/react-material-icon/index.scss';
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
@@ -23,7 +23,6 @@
 }
 .writecard {
   margin-left: 8px;
-  @include mdc-card-shape-radius(8px, false);
 }
 
 .writecard .writetitle {

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Writes.scss"
+import "./cards.scss"
 import IconButton, { IconToggle } from '@material/react-icon-button';
 import MaterialIcon from '@material/react-material-icon';
 import Card, {
@@ -51,7 +52,7 @@ class WritesGrid extends React.Component {
     }
     renderCell(idx, img, title, date) {
         return (
-            <Card key={idx.toString()} className='writecard'>
+            <Card key={idx.toString()} className='writecard roundcard'>
                 <CardPrimaryContent onClick={this.onCardClick}>
                     <CardMedia square imageUrl={img} />
                     <span className='writetitle'>{title}</span>

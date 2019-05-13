@@ -1,21 +1,6 @@
-@import "@material/react-card/index.scss";
 @import url('https://fonts.googleapis.com/css?family=Anton');
-
 .MyCard {
-  @include mdc-card-shape-radius(8px, false);
   height: 110px;
-}
-.green {
-    @include mdc-card-fill-color(mediumspringgreen);
-    // @include mdc-card-outline(mediumspringgreen, 3px)
-}
-.blue {
-    @include mdc-card-fill-color(rgb(19, 226, 233));
-    // @include mdc-card-outline(rgb(19, 226, 233), 3px)
-}
-.pink {
-    @include mdc-card-fill-color(deeppink);
-    // @include mdc-card-outline(deeppink, 3px)
 }
 .MyCard p {
   color: rgb(250, 250, 250);

@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Anton");
-
-@import '@material/react-icon-button/index.scss';
+@import "@material/button/mdc-button";
 @import '@material/react-material-icon/index.scss';
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 // <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -57,10 +55,8 @@
   text-align: center;
 }
 .morebutton {
-  @include mdc-icon-button-ink-color(rgb(235, 232, 202));
-  @include mdc-icon-button-size(80px);
-  // font-size: 100px;
-  text-align: center;
+  // @include mdc-button-ink-color();
+  @include mdc-button-container-fill-color(rgb(185, 67, 83))
 }
 .moreicon {
   font-size: 80px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./PortraitSec.scss"
+import "./contentpanel.scss"
 import posed from "react-pose";
 const deg15 = 15
 const deg0 = 0
@@ -21,9 +22,9 @@ class PortraitSec extends React.Component {
 
         return (
             <div className='PortraitSec'>
-                        <h1>JON IN GUN</h1>
+                        <div class='sectiontitle title'>WHAT KIND OF</div>
                         <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }} />
-                        <h1>WHO ARE YOU?</h1>
+                        <div class='sectiontitle title'>DEVELOPER AM I?</div>
             </div>
         );
     }

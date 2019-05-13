@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Coverage.scss"
 import "./contentpanel.scss"
+import "./font.scss"
 import { Sigma, RandomizeNodePositions, RelativeSize, LoadJSON } from 'react-sigma';
-import { Cell, Grid, Row } from '@material/react-layout-grid';
 
 class Coverage extends React.Component {
     render() {
@@ -13,6 +13,7 @@ class Coverage extends React.Component {
             mouseEnabled: false,
             touchEnabled: false,
             sideMargin: 0.6,
+            // font: 'Roboto',
         }
         return (
             <div className="Coverage">

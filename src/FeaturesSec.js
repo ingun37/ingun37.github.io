@@ -3,6 +3,8 @@ import { Cell, Grid, Row } from '@material/react-layout-grid';
 import "./FeaturesSec.scss"
 import "./contentpanel.scss"
 import "./cards.scss"
+import "./font.scss"
+
 import Card, {
     CardPrimaryContent,
     CardMedia,
@@ -19,8 +21,8 @@ class MyGrid extends React.Component {
                 <Card className={`MyCard roundcard ${color}`} >
                     <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{height:"100%"}}>
                         <div className="blackDiv">
-                            <h2>{title}</h2>
-                            <p>{desc}</p>
+                            <div className='sectionh2 head'>{title}</div>
+                            <div className='mdc-typography--caption sub'>{desc}</div>
                         </div>
                     </CardMedia>
                 </Card>
@@ -48,7 +50,7 @@ class FeaturesSec extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="sectiontitle">I BE LIKE</h1>
+                <div className="sectiontitle">I BE LIKE</div>
                 <div className="gridWrapper contentpanel">
                     <MyGrid />
                 </div>

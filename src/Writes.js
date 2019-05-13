@@ -8,6 +8,7 @@ import Card, {
     CardPrimaryContent,
     CardMedia,
 } from "@material/react-card";
+import Button from '@material/react-button';
 
 let Parser = require('rss-parser');
 let parser = new Parser({
@@ -66,10 +67,10 @@ class WritesGrid extends React.Component {
             <div className='horizdiv'>
                 {this.state.items.map((item, idx) => this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)))}
                 <div className='morediv'>
-                    <h1 className='moretitle'>CHECK OUT MORE</h1>
-                    <IconButton className='morebutton' onClick={this.onMoreClick}>
-                        <MaterialIcon className='moreicon' icon='forward' />
-                    </IconButton>
+                    <h1 className='moretitle'></h1>
+                    <Button className='morebutton' raised={true} trailingIcon={<MaterialIcon icon='forward' />}>
+                        SEE MORE
+                    </Button>
                 </div>
             </div>
         );

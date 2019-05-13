@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import "@material/react-card/index.scss";
-
-.writecard {
-  @include mdc-card-shape-radius(8px, false);
-}
+@import '@material/react-icon-button/index.scss';
+@import '@material/react-material-icon/index.scss';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+// <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+//       rel="stylesheet">
 .Writes .title {
   font-family: "Anton", sans-serif;
   color: rgb(233, 229, 16);
@@ -11,6 +12,18 @@
   margin-top: 0em;
   margin-bottom: 0em;
   text-align: center;
+}
+.horizdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 8px;
+  overflow-x: scroll;
+}
+.writecard {
+  margin-left: 8px;
+  @include mdc-card-shape-radius(8px, false);
 }
 
 .writecard .writetitle {
@@ -21,9 +34,9 @@
   font-weight: bold;
   color: rgb(54, 54, 54);
   // white-space: nowrap;
-  // word-wrap: break-word;
-  // display: block;
-  // width:100%;
+  word-wrap: break-word;
+  display: block;
+  width:200px;
 }
 .writecard .writedate {
   text-overflow: ellipsis;
@@ -36,4 +49,24 @@
   // word-wrap: break-word;
   // display: block;
   // width:100%;
+}
+.morediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.moretitle {
+  width:200px;
+  color: rgb(235, 232, 202);
+  text-align: center;
+}
+.morebutton {
+  @include mdc-icon-button-ink-color(rgb(235, 232, 202));
+  @include mdc-icon-button-size(80px);
+  // font-size: 100px;
+  text-align: center;
+}
+.moreicon {
+  font-size: 80px;
 }

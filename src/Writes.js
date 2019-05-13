@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Writes.scss"
-import { Cell, Grid, Row } from '@material/react-layout-grid';
+import IconButton, { IconToggle } from '@material/react-icon-button';
+import MaterialIcon from '@material/react-material-icon';
 import Card, {
     CardPrimaryContent,
     CardMedia,
@@ -35,7 +36,7 @@ class WritesGrid extends React.Component {
         (async () => {
             let feed = await parser.parseURL(process.env.PUBLIC_URL + `/wordpress-rss.xml`);
             let items = feed.items;
-            items.forEach(i=>i.thumbnail = unpackthum(i))
+            items.forEach(i => i.thumbnail = unpackthum(i))
             this.setState({
                 items: items.filter(i => i.thumbnail).slice(0, 6)
             })
@@ -44,26 +45,32 @@ class WritesGrid extends React.Component {
     onCardClick(e) {
         console.log(e)
     }
+    onMoreClick() {
+        const url = 'https://ingun37.wordpress.com';
+        window.open(url, '_blank');
+    }
     renderCell(idx, img, title, date) {
         return (
-            <Cell columns={3} key={idx.toString()}>
-                <Card className='writecard'>
-                    <CardPrimaryContent onClick={this.onCardClick}>
-                        <CardMedia square imageUrl={img}/>                            
-                        <span className='writetitle'>{title}</span>
-                        <span className='writedate'>{date}</span>
-                    </CardPrimaryContent>
-                </Card>
-            </Cell>
+            <Card key={idx.toString()} className='writecard'>
+                <CardPrimaryContent onClick={this.onCardClick}>
+                    <CardMedia square imageUrl={img} />
+                    <span className='writetitle'>{title}</span>
+                    <span className='writedate'>{date}</span>
+                </CardPrimaryContent>
+            </Card>
         );
     }
     render() {
         return (
-            <Grid>
-                <Row>
-                    {this.state.items.map((item, idx)=>this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0,'Tue, 02 Apr 2019'.length)))}
-                </Row>
-            </Grid>
+            <div className='horizdiv'>
+                {this.state.items.map((item, idx) => this.renderCell(idx, item.thumbnail, item.title, item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)))}
+                <div className='morediv'>
+                    <h1 className='moretitle'>check out more!</h1>
+                    <IconButton className='morebutton' onClick={this.onMoreClick}>
+                        <MaterialIcon className='moreicon' icon='forward' />
+                    </IconButton>
+                </div>
+            </div>
         );
     }
 }

@@ -11,10 +11,24 @@ import Coverage from "./Coverage";
 import Writes from "./Writes";
 import posed from "react-pose";
 
+
+import '@material/react-top-app-bar/index.scss';
+import '@material/react-material-icon/index.scss';
+import TopAppBar, {
+  TopAppBarFixedAdjust,
+  TopAppBarIcon,
+  TopAppBarRow,
+  TopAppBarSection,
+  TopAppBarTitle,
+} from '@material/react-top-app-bar';
+import MaterialIcon from '@material/react-material-icon';
+
+
 const dayColor = "rgb(218, 199, 30)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
 const skyblueColor = 'rgb(141, 191, 211)'
+
 
 const SkyDiv = posed.div({
   [dayColor]: { backgroundColor: dayColor },
@@ -34,7 +48,7 @@ const CompassDiv = posed.div({
     scale: 1, rotate: 180,
     transition: {
       scale: {
-        ease:'linear',
+        ease: 'linear',
         duration: 500
       },
       rotate: {
@@ -70,7 +84,7 @@ class App extends React.Component {
     }
   }
 
-  render() {
+  renderContent() {
     const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'
     const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
     return (
@@ -85,7 +99,7 @@ class App extends React.Component {
         />
         <ReactFullpage
           onLeave={this.onLeave.bind(this)}
-
+          navigation={true}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -106,6 +120,35 @@ class App extends React.Component {
           }}
         />
       </SkyDiv>
+    );
+  }
+  render() {
+
+    return (
+      <div>
+        <TopAppBar shortCollapsed={true}>
+          <TopAppBarRow>
+            <TopAppBarSection align='start'>
+              <TopAppBarIcon navIcon tabIndex={0}>
+                <MaterialIcon hasRipple icon='menu' onClick={() => console.log('click')} />
+              </TopAppBarIcon>
+              <TopAppBarTitle>Miami, FL</TopAppBarTitle>
+            </TopAppBarSection>
+            <TopAppBarSection align='end' role='toolbar'>
+              <TopAppBarIcon actionItem tabIndex={0}>
+                <MaterialIcon
+                  aria-label="print page"
+                  hasRipple
+                  icon='print'
+                  onClick={() => console.log('print')}
+                />
+              </TopAppBarIcon>
+            </TopAppBarSection>
+          </TopAppBarRow>
+        </TopAppBar>
+          {this.renderContent()}
+      </div>
+
     );
   }
 }

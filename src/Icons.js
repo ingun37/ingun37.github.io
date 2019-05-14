@@ -34,11 +34,12 @@ export function Icon(props) {
   const {
     img = 'github',
     color = 'red',
+    onClick,
   } = props;
   const svgpath = 'url(' + process.env.PUBLIC_URL + `/${img}.svg)`
   const style = { maskImage: svgpath, WebkitMaskImage: svgpath, backgroundColor: color}
   return (
-    <RippleWrapper className='ripplewrapper' hasRipple>
+    <RippleWrapper className='ripplewrapper' onClick={onClick}>
       <div className='iconwrapper'>
         <div className='iconimg' style={style}/>
       </div>

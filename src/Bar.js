@@ -15,6 +15,12 @@ export class Bar extends React.Component {
   onMail() {
     window.location.href = `mailto:ingun37@gmail.com`;
   }
+  onGithub() {
+    window.open("https://github.com/ingun37", '_blank');
+  }
+  onWordpress() {
+    window.open("https://ingun37.wordpress.com", '_blank');
+  }
   render() {
     return (
       <TopAppBar shortCollapsed={true} style={{ width: '144px' }}>
@@ -23,10 +29,10 @@ export class Bar extends React.Component {
             <MaterialIcon hasRipple icon='email' onClick={this.onMail} />
           </TopAppBarIcon>
           <TopAppBarIcon navIcon >
-            <Icon img="github" color="white" />
+            <Icon img="github" color="white" onClick={this.onGithub} />
           </TopAppBarIcon>
           <TopAppBarIcon navIcon >
-            <Icon img="wordpress" color="white" />
+            <Icon img="wordpress" color="white" onClick={this.onWordpress} />
           </TopAppBarIcon>
         </TopAppBarRow>
       </TopAppBar>

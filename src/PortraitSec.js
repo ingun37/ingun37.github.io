@@ -22,9 +22,9 @@ class PortraitSec extends React.Component {
 
         return (
             <div className='PortraitSec'>
-                        <div class='sectiontitle title'>WHAT KIND OF</div>
+                        <div className='sectiontitle title'>WHAT KIND OF</div>
                         <div className="PortraitImage" style={{ maskImage: `url(${svgpath})`, WebkitMaskImage: `url(${svgpath})` }} />
-                        <div class='sectiontitle title'>DEVELOPER AM I?</div>
+                        <div className='sectiontitle title'>DEVELOPER AM I?</div>
             </div>
         );
     }

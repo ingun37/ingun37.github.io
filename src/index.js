@@ -22,7 +22,7 @@ import TopAppBar, {
   TopAppBarTitle,
 } from '@material/react-top-app-bar';
 import MaterialIcon from '@material/react-material-icon';
-
+import { Icon } from "./Icons";
 
 const dayColor = "rgb(218, 199, 30)"
 const nightColor = "rgb(11, 16, 77)"
@@ -123,22 +123,19 @@ class App extends React.Component {
     );
   }
   render() {
-
     return (
       <div>
-        <TopAppBar shortCollapsed={true}>
+        <TopAppBar shortCollapsed={true} style={{width:'140px'}}>
           <TopAppBarRow>
-              <TopAppBarIcon navIcon tabIndex={0}>
-                <MaterialIcon hasRipple icon='menu' onClick={() => console.log('click')} />
-              </TopAppBarIcon>
-              <TopAppBarIcon actionItem tabIndex={0}>
-                <MaterialIcon
-                  aria-label="print page"
-                  hasRipple
-                  icon='print'
-                  onClick={() => console.log('print')}
-                />
-              </TopAppBarIcon>
+            <TopAppBarIcon navIcon tabIndex={0}>
+              <MaterialIcon hasRipple icon='email' onClick={() => console.log('click')} />
+            </TopAppBarIcon>
+            <TopAppBarIcon actionItem tabIndex={1}>
+              <MaterialIcon hasRipple icon='code' onClick={() => console.log('print')} />
+            </TopAppBarIcon>
+            <TopAppBarIcon navIcon >
+              <Icon img="github" color="white" />
+            </TopAppBarIcon>
           </TopAppBarRow>
         </TopAppBar>
         {this.renderContent()}

@@ -1,0 +1,27 @@
+@import "@material/ripple/mdc-ripple.scss";
+
+// refer to element in Javascript portion below
+.ripple-icon-component {
+  @include mdc-ripple-surface;
+  @include mdc-ripple-radius-bounded;
+  @include mdc-states;
+  overflow: hidden;
+}
+
+.iconwrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconimg {
+  width: 50%;
+  height: 50%;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+//style={{ maskImage: svgpath, WebkitMaskImage: svgpath, backgroundColor: color}} 

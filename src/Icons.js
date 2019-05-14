@@ -38,8 +38,10 @@ export function Icon(props) {
   const svgpath = 'url(' + process.env.PUBLIC_URL + `/${img}.svg)`
   const style = { maskImage: svgpath, WebkitMaskImage: svgpath, backgroundColor: color}
   return (
-    <RippleWrapper className='iconwrapper' hasRipple>
-      <div className='iconimg' style={style}/>
+    <RippleWrapper className='ripplewrapper' hasRipple>
+      <div className='iconwrapper'>
+        <div className='iconimg' style={style}/>
+      </div>
     </RippleWrapper>
   )
 }

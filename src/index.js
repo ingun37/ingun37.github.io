@@ -125,7 +125,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TopAppBar shortCollapsed={true} style={{width:'140px'}}>
+        <TopAppBar shortCollapsed={true} style={{width:'192px'}}>
           <TopAppBarRow>
             <TopAppBarIcon navIcon tabIndex={0}>
               <MaterialIcon hasRipple icon='email' onClick={() => console.log('click')} />
@@ -135,6 +135,9 @@ class App extends React.Component {
             </TopAppBarIcon>
             <TopAppBarIcon navIcon >
               <Icon img="github" color="white" />
+            </TopAppBarIcon>
+            <TopAppBarIcon navIcon >
+              <Icon img="wordpress" color="white" />
             </TopAppBarIcon>
           </TopAppBarRow>
         </TopAppBar>

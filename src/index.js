@@ -11,18 +11,7 @@ import Coverage from "./Coverage";
 import Writes from "./Writes";
 import posed from "react-pose";
 
-
-import '@material/react-top-app-bar/index.scss';
-import '@material/react-material-icon/index.scss';
-import TopAppBar, {
-  TopAppBarFixedAdjust,
-  TopAppBarIcon,
-  TopAppBarRow,
-  TopAppBarSection,
-  TopAppBarTitle,
-} from '@material/react-top-app-bar';
-import MaterialIcon from '@material/react-material-icon';
-import { Icon } from "./Icons";
+import {Bar} from "./Bar.js";
 
 const dayColor = "rgb(218, 199, 30)"
 const nightColor = "rgb(11, 16, 77)"
@@ -125,22 +114,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TopAppBar shortCollapsed={true} style={{width:'192px'}}>
-          <TopAppBarRow>
-            <TopAppBarIcon navIcon tabIndex={0}>
-              <MaterialIcon hasRipple icon='email' onClick={() => console.log('click')} />
-            </TopAppBarIcon>
-            <TopAppBarIcon actionItem tabIndex={1}>
-              <MaterialIcon hasRipple icon='code' onClick={() => console.log('print')} />
-            </TopAppBarIcon>
-            <TopAppBarIcon navIcon >
-              <Icon img="github" color="white" />
-            </TopAppBarIcon>
-            <TopAppBarIcon navIcon >
-              <Icon img="wordpress" color="white" />
-            </TopAppBarIcon>
-          </TopAppBarRow>
-        </TopAppBar>
+        <Bar />
         {this.renderContent()}
       </div>
 

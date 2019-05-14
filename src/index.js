@@ -52,8 +52,8 @@ const CompassDiv = posed.div({
         duration: 500
       },
       rotate: {
-        ease: 'easeInOut',
-        duration: 40000
+        type: 'spring',
+        duration: 500
       }
     }
   },
@@ -128,13 +128,9 @@ class App extends React.Component {
       <div>
         <TopAppBar shortCollapsed={true}>
           <TopAppBarRow>
-            <TopAppBarSection align='start'>
               <TopAppBarIcon navIcon tabIndex={0}>
                 <MaterialIcon hasRipple icon='menu' onClick={() => console.log('click')} />
               </TopAppBarIcon>
-              <TopAppBarTitle>Miami, FL</TopAppBarTitle>
-            </TopAppBarSection>
-            <TopAppBarSection align='end' role='toolbar'>
               <TopAppBarIcon actionItem tabIndex={0}>
                 <MaterialIcon
                   aria-label="print page"
@@ -143,10 +139,9 @@ class App extends React.Component {
                   onClick={() => console.log('print')}
                 />
               </TopAppBarIcon>
-            </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
-          {this.renderContent()}
+        {this.renderContent()}
       </div>
 
     );

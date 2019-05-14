@@ -11,20 +11,25 @@ import TopAppBar, {
 import MaterialIcon from '@material/react-material-icon';
 import { Icon } from "./Icons";
 
-export function Bar() {
+export class Bar extends React.Component {
+  onMail() {
+    window.location.href = `mailto:ingun37@gmail.com`;
+  }
+  render() {
     return (
-        <TopAppBar shortCollapsed={true} style={{width:'144px'}}>
-          <TopAppBarRow>
-            <TopAppBarIcon navIcon tabIndex={0}>
-              <MaterialIcon hasRipple icon='email' onClick={() => console.log('click')} />
-            </TopAppBarIcon>
-            <TopAppBarIcon navIcon >
-              <Icon img="github" color="white" />
-            </TopAppBarIcon>
-            <TopAppBarIcon navIcon >
-              <Icon img="wordpress" color="white" />
-            </TopAppBarIcon>
-          </TopAppBarRow>
-        </TopAppBar>
+      <TopAppBar shortCollapsed={true} style={{ width: '144px' }}>
+        <TopAppBarRow>
+          <TopAppBarIcon navIcon tabIndex={0}>
+            <MaterialIcon hasRipple icon='email' onClick={this.onMail} />
+          </TopAppBarIcon>
+          <TopAppBarIcon navIcon >
+            <Icon img="github" color="white" />
+          </TopAppBarIcon>
+          <TopAppBarIcon navIcon >
+            <Icon img="wordpress" color="white" />
+          </TopAppBarIcon>
+        </TopAppBarRow>
+      </TopAppBar>
     )
+  }
 }

@@ -13,22 +13,25 @@
   overflow-x: scroll;
 }
 .writecard {
+  width: 200px;
   margin-left: 8px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
 .writecard .writetitle {
-  text-overflow: ellipsis;
+  // text-overflow: ellipsis;
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 4px;
   font-weight: bold;
   color: rgb(54, 54, 54);
+  overflow: hidden;
+  white-space: normal; 
+  // height: 50px;
   // white-space: nowrap;
-  word-wrap: break-word;
-  display: block;
-  width:200px;
+  // word-wrap: break-word;
+  // display: block;
 }
 .writecard .writedate {
   text-overflow: ellipsis;
@@ -60,4 +63,17 @@
 }
 .moreicon {
   font-size: 80px;
+}
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+ 
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
 }

@@ -62,8 +62,8 @@ class App extends React.Component {
         <CityBG state={this.state.cityState}/>
         <CompassBG state={this.state.compassState}/>
         <ReactFullpage
+          touchSensitivity={20}
           onLeave={this.onLeave.bind(this)}
-          navigation={true}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

@@ -24,6 +24,7 @@
     "react-pose": "^4.0.8",
     "react-scripts": "3.0.1",
     "react-sigma": "^1.2.30",
+    "react-sizes": "^2.0.0",
     "rss-parser": "^3.7.0",
     "svgo": "^1.2.2",
     "typescript": "^3.4.5"

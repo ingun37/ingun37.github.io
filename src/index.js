@@ -11,8 +11,8 @@ import Coverage from "./Coverage";
 import Writes from "./Writes";
 import posed from "react-pose";
 
-import { Bar } from "./Bar.js";
-
+import { Bar } from "./Bar";
+import {SunBG, CityBG, CompassBG} from './BGs'
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
@@ -26,30 +26,13 @@ const SkyDiv = posed.div({
   [skyblueColor]: { backgroundColor: skyblueColor },
 })
 
-const BGDiv = posed.div({
-  visible: {
-    scale: 1, rotate: 180,
-    transition: {
-      scale: {
-        ease: 'linear',
-        duration: 500
-      },
-      rotate: {
-        type: 'spring',
-        duration: 500
-      }
-    }
-  },
-  hidden: { scale: 0, rotate: 0, transition: { ease: 'linear', duration: 500 } },
-});
-
 class App extends React.Component {
   state = { sunState: 'visible', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden' }
 
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
-      this.setState({ sunState: 'hidden', cityState: 'visible', skyColor: nightColor })
+      this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor })
     } else if (origin.index == 1 && destination.index == 0) {
       this.setState({ sunState: 'visible', cityState: 'hidden', skyColor: dayColor })
     }
@@ -73,18 +56,9 @@ class App extends React.Component {
     const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
-        <BGDiv className="MyBG"
-          pose={this.state.sunState}
-          style={{ "maskImage": sunURL, "WebkitMaskImage": sunURL, backgroundColor: 'rgb(218, 199, 30)' }}
-        />
-        <BGDiv className="MyBG"
-          pose={this.state.cityState}
-          style={{ "maskImage": citysvgURL, "WebkitMaskImage": citysvgURL, backgroundColor: 'rgb(223, 29, 62)' }}
-        />
-        <BGDiv className="MyBG"
-          pose={this.state.compassState}
-          style={{ "maskImage": compasssvgURL, "WebkitMaskImage": compasssvgURL, backgroundColor: 'rgb(223, 29, 62)', opacity: 0.2 }}
-        />
+        <SunBG state={this.state.sunState}/>
+        <CityBG state={this.state.cityState}/>
+        <CompassBG state={this.state.compassState}/>
         <ReactFullpage
           onLeave={this.onLeave.bind(this)}
           navigation={true}

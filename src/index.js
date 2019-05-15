@@ -27,14 +27,14 @@ const SkyDiv = posed.div({
 })
 
 class App extends React.Component {
-  state = { sunState: 'visible', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden' }
+  state = { sunState: 'hidden', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden' }
 
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
       this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor })
     } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ sunState: 'visible', cityState: 'hidden', skyColor: dayColor })
+      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: dayColor })
     }
 
     if (origin.index == 1 && destination.index == 2) {
@@ -49,7 +49,9 @@ class App extends React.Component {
       this.setState({ skyColor: coverageColor })
     }
   }
-
+  componentDidMount() {
+    this.setState({ sunState: 'rot' })
+  }
   renderContent() {
     const sunURL = 'url(' + process.env.PUBLIC_URL + '/sun.svg' + ')'
     const citysvgURL = 'url(' + process.env.PUBLIC_URL + '/city.svg' + ')'

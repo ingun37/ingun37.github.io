@@ -8,8 +8,12 @@
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
+  
   min-height: 200px;
   height: 30vh;
+  min-width: 200px;
+  width: 30vh;
+
   background-color: rgb(36, 36, 36);
 }
 
@@ -26,3 +30,15 @@
     background-color: rgb(228, 223, 177);
     opacity: 0.5;
 }
+
+.PortraitSec .centerer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PortraitSec .circle {
+  background-color: rgb(218, 199, 30);
+  border-radius: 50%;
+}
+//rgb(223, 29, 62)
+//rgb(235, 228, 193)

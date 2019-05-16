@@ -1,0 +1,10 @@
+.marqueecontainer {
+    height: 100px;
+    opacity: 0.3;
+}
+.marqueeitem {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}

@@ -2,8 +2,7 @@ import React from 'react';
 import { default as scss } from "./Coverage.scss"
 import "./contentpanel.scss"
 import "./font.scss"
-import { Sigma, RandomizeNodePositions, RelativeSize, LoadJSON } from 'react-sigma';
-
+import {BrandsMarquee} from './BrandsMarquee'
 class Coverage extends React.Component {
     render() {
         const setting = {
@@ -17,11 +16,10 @@ class Coverage extends React.Component {
         }
         return (
             <div className="Coverage">
-                <h1 className="sectiontitle">COVERAGE</h1>
+                <h1 className="sectiontitle coveragetitle">COVERAGE</h1>
                 <div className="contentpanel coveragepanel">
-                    <Sigma  settings={setting} >
-                        <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
-                    </Sigma>
+                    <div className='sectionh3 coveragesubtitle'>COUNTLESS EXPERIENCES ON 3D-GRAHPICS, GAME, MOBILE, FULLSTACK, AND MANY OTHERS</div>
+                    <BrandsMarquee onPage={this.props.onPage || false}/>
                 </div>
             </div>
         );

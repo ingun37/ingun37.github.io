@@ -1,6 +1,9 @@
 import React from 'react';
 import posed from "react-pose";
-import './BGs.scss'
+import { default as scss } from './BGs.scss'
+import { Sigma, RandomizeNodePositions, RelativeSize, LoadJSON } from 'react-sigma';
+import withSizes from 'react-sizes'
+
 let tot = 10
 let ran = [...new Array(tot).keys()]
 const BGDiv = posed.div({
@@ -27,8 +30,8 @@ const BGDiv = posed.div({
             },
             rotate: {
                 type: 'keyframes',
-                values: [0].concat(ran.map(n=>n%2==0 ? [0, 15] : [15,0]).flat()),
-                times:  ran.map((n, i, arr)=>[n/tot, (n+1)/tot-0.001]).flat().concat([1]),
+                values: [0].concat(ran.map(n => n % 2 == 0 ? [0, 15] : [15, 0]).flat()),
+                times: ran.map((n, i, arr) => [n / tot, (n + 1) / tot - 0.001]).flat().concat([1]),
                 duration: 5000,
             }
         }
@@ -68,12 +71,30 @@ export function CityBG(props) {
         />
     )
 }
-export function CompassBG(props) {
+const mapSizesToProps = ({ height }) => ({
+    screenHeight: height,
+})
+function _CompassBG(props) {
     const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
+    const setting = {
+        labelThreshold: 0,
+        defaultNodeColor: scss.nodecolor,
+        defaultLabelColor: scss.labelcolor,
+        mouseEnabled: false,
+        touchEnabled: false,
+        sideMargin: 0.6,
+        // font: 'Roboto',
+    }
+    const heightPx = `${props.screenHeight}px`
+    console.log("screenh : " + heightPx)
     return (
         <BGDiv className="MyBG contain"
             pose={props.state}
-            style={{ "maskImage": compasssvgURL, "WebkitMaskImage": compasssvgURL, backgroundColor: 'rgb(223, 29, 62)', opacity: 0.2 }}
-        />
+        >
+            <Sigma settings={setting} renderer="canvas" style={{height:heightPx}}>
+                <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
+            </Sigma>
+        </BGDiv>
     )
 }
+export let CompassBG = withSizes(mapSizesToProps)(_CompassBG)

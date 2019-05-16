@@ -12,7 +12,7 @@ import Writes from "./Writes";
 import posed from "react-pose";
 
 import { Bar } from "./Bar";
-import {SunBG, CityBG, CompassBG} from './BGs'
+import { SunBG, CityBG, CompassBG } from './BGs'
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
@@ -27,26 +27,28 @@ const SkyDiv = posed.div({
 })
 
 class App extends React.Component {
-  state = { sunState: 'hidden', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden' }
+  state = {
+    sunState: 'hidden', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden', currentIndex: 0
+  }
 
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
-      this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor })
+      this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor, currentIndex: destination.index })
     } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: dayColor })
+      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: dayColor, currentIndex: destination.index })
     }
 
     if (origin.index == 1 && destination.index == 2) {
-      this.setState({ cityState: 'hidden', compassState: 'visible', skyColor: coverageColor })
+      this.setState({ cityState: 'hidden', compassState: 'visible', skyColor: coverageColor, currentIndex: destination.index })
     } else if (origin.index == 2 && destination.index == 1) {
-      this.setState({ cityState: 'visible', compassState: 'hidden', skyColor: nightColor })
+      this.setState({ cityState: 'visible', compassState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
     }
 
     if (origin.index == 2 && destination.index == 3) {
-      this.setState({ skyColor: skyblueColor })
+      this.setState({ skyColor: skyblueColor, currentIndex: destination.index })
     } else if (origin.index == 3 && destination.index == 2) {
-      this.setState({ skyColor: coverageColor })
+      this.setState({ skyColor: coverageColor, currentIndex: destination.index })
     }
   }
   componentDidMount() {
@@ -58,11 +60,11 @@ class App extends React.Component {
     const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
-        <SunBG state={this.state.sunState}/>
-        <CityBG state={this.state.cityState}/>
-        <CompassBG state={this.state.compassState}/>
+        <SunBG state={this.state.sunState} />
+        <CityBG state={this.state.cityState} />
+        <CompassBG state={this.state.compassState} />
         <ReactFullpage
-          touchSensitivity={20}
+          touchSensitivity={15}
           onLeave={this.onLeave.bind(this)}
           render={({ state, fullpageApi }) => {
             return (
@@ -74,7 +76,7 @@ class App extends React.Component {
                   <FeaturesSec />
                 </div>
                 <div className="section">
-                  <Coverage />
+                  <Coverage onPage={this.state.currentIndex == 2} />
                 </div>
                 <div className="section">
                   <Writes />

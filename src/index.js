@@ -16,7 +16,7 @@ import { SunBG, CityBG, CompassBG } from './BGs'
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
-const skyblueColor = 'rgb(141, 191, 211)'
+const skyblueColor = 'rgb(183, 192, 194)'
 
 
 const SkyDiv = posed.div({

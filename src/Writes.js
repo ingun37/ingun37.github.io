@@ -3,6 +3,7 @@ import "./Writes.scss"
 import "./cards.scss"
 import "./contentpanel.scss"
 import IconButton from '@material/react-icon-button';
+
 import MaterialIcon from '@material/react-material-icon';
 import Card, {
     CardPrimaryContent,
@@ -45,11 +46,9 @@ export const Menu = (rssItemlist) =>
     rssItemlist.map((item, idx) => {
         return <MenuItem idx={idx} key={idx.toString()} img={item.thumbnail} title={item.title} date={item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)} />;
     }).concat([(
-        <div className='morediv' key={rssItemlist.length.toString()}>
-            <h1 className='moretitle'></h1>
-            <Button className='morebutton' raised={true} trailingIcon={<MaterialIcon icon='forward' />} >
-                SEE MORE
-    </Button>
+        <div className='morediv ' key={rssItemlist.length.toString()}>
+            <div className='sectionh3 moretitle'>CHECK OUT MORE</div>
+            
         </div>
     )]);
 
@@ -102,7 +101,7 @@ class Writes extends React.Component {
         const menu = Menu(this.state.items);
         return (
             <div>
-                <h1 className='sectiontitle'>I WRITE THINGS</h1>
+                <h1 className='sectiontitle writetitle'>I WRITE THINGS</h1>
                 <div className="Writes contentpanel">
                     <ScrollMenu
                         data={menu}

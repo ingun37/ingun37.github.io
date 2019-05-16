@@ -2,7 +2,7 @@ import React from 'react';
 import './BrandsMarquee.scss'
 import posed from "react-pose";
 import withSizes from 'react-sizes'
-
+import Image from 'react-shimmer'
 
 var Marquee = require('react-marquee');
 const brandnum = 18;
@@ -31,12 +31,21 @@ const MarqueeDiv = withSizes(mapSizesToProps)(posed.div({
     })
   },
 }));
+function renderImg() {
+  return (
+    <Image
+        src="https://example.com/test.jpg"
+        width={640} height={480}
+        style={{ objectFit: 'cover' }}
+      />
+  )
+}
 export class BrandsMarquee extends React.Component {
   render() {
     let ran = [...new Array(brandnum).keys()]
     return (
       <MarqueeDiv pose={(this.props.onPage || false) ? 'moving' : 'staying'} screenWidth={100} className='marqueecontainer' style={{ width: `${brandnum * 100}px` }}>
-        {ran.map(idx => (<img src={`${process.env.PUBLIC_URL}/brands/${idx}.png`} key={idx.toString()} className='marqueeitem' />))}
+        {ran.map(idx => (<Image width={100} height={100} src={`${process.env.PUBLIC_URL}/brands/${idx}.png`} key={idx.toString()} className='marqueeitem' />))}
       </MarqueeDiv>
     );
   }

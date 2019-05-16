@@ -26,6 +26,7 @@
     "react-marquee": "^1.0.0",
     "react-pose": "^4.0.8",
     "react-scripts": "3.0.1",
+    "react-shimmer": "^2.0.1",
     "react-sigma": "^1.2.30",
     "react-sizes": "^2.0.0",
     "rss-parser": "^3.7.0",

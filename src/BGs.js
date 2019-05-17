@@ -71,6 +71,40 @@ export function CityBG(props) {
         />
     )
 }
+
+
+
+function fillModel(x, len, min, max) { return (len / (max - min)) * (x - min) }
+function fill(sigma, renderer) {
+    var _container = renderer.container,
+        _nodes = sigma.graph.nodes();
+    if (_nodes.length < 2) {
+        return;
+    }
+    const allX = _nodes.map(function (n) { return n.x })
+    const allY = _nodes.map(function (n) { return n.y })
+    const maxX = allX.reduce(function (l, r) { return l < r ? r : l })
+    const minX = allX.reduce(function (l, r) { return l < r ? l : r })
+    const maxY = allY.reduce(function (l, r) { return l < r ? r : l })
+    const minY = allY.reduce(function (l, r) { return l < r ? l : r })
+    const containerW = _container.offsetWidth;
+    const containerH = _container.offsetHeight;
+    console.log(`${containerW}, ${containerH}, ${maxX}, ${minX}`)
+    for (var nid in _nodes) {
+        var n = _nodes[nid]
+        n.x = fillModel(n.x, containerW, minX, maxX)
+        n.y = fillModel(n.y, containerH, minY, maxY)
+    }
+    sigma.refresh();
+}
+class FillDiv extends React.Component {
+
+    componentDidMount() {
+        fill(this.props.sigma, this.props.sigma.renderers[0])
+    }
+    render = () => null
+}
+
 const mapSizesToProps = ({ height }) => ({
     screenHeight: height,
 })
@@ -82,7 +116,7 @@ function _CompassBG(props) {
         defaultLabelColor: scss.labelcolor,
         mouseEnabled: false,
         touchEnabled: false,
-        sideMargin: 0.6,
+        sideMargin: 32,
         // font: 'Roboto',
     }
     const heightPx = `${props.screenHeight}px`
@@ -91,8 +125,10 @@ function _CompassBG(props) {
         <BGDiv className="MyBG contain"
             pose={props.state}
         >
-            <Sigma settings={setting} renderer="canvas" style={{height:heightPx}}>
-                <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} />
+            <Sigma settings={setting} renderer="canvas" style={{ height: heightPx }}>
+                <LoadJSON path={process.env.PUBLIC_URL + "/graph-data.json"} >
+                    <FillDiv />
+                </LoadJSON>
             </Sigma>
         </BGDiv>
     )

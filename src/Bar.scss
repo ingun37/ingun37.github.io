@@ -1,0 +1,4 @@
+@import "@material/top-app-bar/mdc-top-app-bar";
+.mybar {
+    @include mdc-top-app-bar-fill-color(rgb(25, 25, 27))
+}

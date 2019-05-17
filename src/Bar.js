@@ -10,7 +10,7 @@ import TopAppBar, {
 } from '@material/react-top-app-bar';
 import MaterialIcon from '@material/react-material-icon';
 import { Icon } from "./Icons";
-
+import './Bar.scss'
 export class Bar extends React.Component {
   onMail() {
     window.location.href = `mailto:ingun37@gmail.com`;
@@ -23,7 +23,7 @@ export class Bar extends React.Component {
   }
   render() {
     return (
-      <TopAppBar shortCollapsed={true} style={{ width: '144px' }}>
+      <TopAppBar className='mybar' shortCollapsed={true} style={{ width: '144px' }}>
         <TopAppBarRow>
           <TopAppBarIcon navIcon tabIndex={0}>
             <MaterialIcon hasRipple icon='email' onClick={this.onMail} />

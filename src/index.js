@@ -16,7 +16,7 @@ import { SunBG, CityBG, CompassBG } from './BGs'
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
-const skyblueColor = 'rgb(183, 192, 194)'
+const skyblueColor = 'rgb(243, 243, 219)'
 
 
 const SkyDiv = posed.div({
@@ -46,9 +46,9 @@ class App extends React.Component {
     }
 
     if (origin.index == 2 && destination.index == 3) {
-      this.setState({ skyColor: skyblueColor, currentIndex: destination.index })
+      this.setState({ skyColor: skyblueColor, compassState: 'hidden', currentIndex: destination.index })
     } else if (origin.index == 3 && destination.index == 2) {
-      this.setState({ skyColor: coverageColor, currentIndex: destination.index })
+      this.setState({ skyColor: coverageColor, compassState: 'visible', currentIndex: destination.index })
     }
   }
   componentDidMount() {
@@ -69,7 +69,7 @@ class App extends React.Component {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section" style={{ zIndex: -2 }}>
+                <div className="section">
                   <PortraitSec />
                 </div>
                 <div className="section">

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import {default as scss} from './index.scss';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -13,6 +13,8 @@ import posed from "react-pose";
 
 import { Bar } from "./Bar";
 import { SunBG, CityBG, CompassBG } from './BGs'
+import { withIsDesktop } from "./Sizes";
+
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
@@ -25,8 +27,10 @@ const SkyDiv = posed.div({
   [coverageColor]: { backgroundColor: coverageColor },
   [skyblueColor]: { backgroundColor: skyblueColor },
 })
-
-class App extends React.Component {
+const mapSizesToProps = ({ width }) => ({
+  isDesktop: width >= scss.desktopbp
+})
+class _App extends React.Component {
   state = {
     sunState: 'hidden', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden', currentIndex: 0
   }
@@ -66,6 +70,8 @@ class App extends React.Component {
         <ReactFullpage
           touchSensitivity={15}
           onLeave={this.onLeave.bind(this)}
+          autoScrolling={this.props.isDesktop ? true : false}
+          fitToSection={this.props.isDesktop ? true : false}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -98,7 +104,7 @@ class App extends React.Component {
     );
   }
 }
-
+const App = withIsDesktop(_App)
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // ReactDOM.render(<App />, document.getElementById('root'));

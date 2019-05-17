@@ -106,6 +106,7 @@ class Writes extends React.Component {
                     <ScrollMenu
                         data={menu}
                         onSelect={this.onSelect}
+
                     />
                 </div>
             </div>

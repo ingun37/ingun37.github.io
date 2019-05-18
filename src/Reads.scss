@@ -1,0 +1,31 @@
+
+// <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+//       rel="stylesheet">
+
+.Reads.contentpanel {
+  background-color: rgb(19, 22, 61)
+}
+
+.horizdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 8px;
+  overflow-x: scroll;
+}
+.readtitle {
+  color: rgb(19, 22, 61)
+}
+.readcard {
+  width: 150px;
+  margin: 16px 4px;
+  // margin-left: 8px;
+  // margin-top: 16px;
+  // margin-bottom: 16px;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}

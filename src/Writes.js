@@ -42,13 +42,12 @@ const MenuItem = ({ idx, img, title, date }) => {
     );
 };
 
-export const Menu = (rssItemlist) =>
+const Menu = (rssItemlist) =>
     rssItemlist.map((item, idx) => {
         return <MenuItem idx={idx} key={idx.toString()} img={item.thumbnail} title={item.title} date={item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)} />;
     }).concat([(
         <div className='morediv ' key={rssItemlist.length.toString()}>
             <div className='sectionh3 moretitle'>CHECK OUT MORE</div>
-            
         </div>
     )]);
 

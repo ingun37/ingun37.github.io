@@ -9,6 +9,7 @@ import FeaturesSec from "./FeaturesSec";
 import PortraitSec from "./PortraitSec";
 import Coverage from "./Coverage";
 import Writes from "./Writes";
+import Reads from "./Reads";
 import posed from "react-pose";
 
 import { Bar } from "./Bar";
@@ -19,7 +20,6 @@ const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
 const skyblueColor = 'rgb(243, 243, 219)'
-
 
 const SkyDiv = posed.div({
   [dayColor]: { backgroundColor: dayColor },
@@ -86,6 +86,9 @@ class _App extends React.Component {
                 </div>
                 <div className="section">
                   <Writes />
+                </div>
+                <div className="section">
+                  <Reads />
                 </div>
               </ReactFullpage.Wrapper>
             );

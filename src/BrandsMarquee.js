@@ -40,12 +40,13 @@ function renderImg() {
       />
   )
 }
+const logoItem=(idx)=><Image width={100} height={100} src={`${process.env.PUBLIC_URL}/brands/${idx}.png`} key={idx.toString()} className='marqueeitem' />
+const logos=(num)=>(new Array(num).fill(null)).map((_, idx)=>logoItem(idx))
 export class BrandsMarquee extends React.Component {
   render() {
-    let ran = [...new Array(brandnum).keys()]
     return (
       <MarqueeDiv pose={(this.props.onPage || false) ? 'moving' : 'staying'} screenWidth={100} className='marqueecontainer' style={{ width: `${brandnum * 100}px` }}>
-        {ran.map(idx => (<Image width={100} height={100} src={`${process.env.PUBLIC_URL}/brands/${idx}.png`} key={idx.toString()} className='marqueeitem' />))}
+        {logos(brandnum)}
       </MarqueeDiv>
     );
   }

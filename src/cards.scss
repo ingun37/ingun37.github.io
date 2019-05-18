@@ -11,3 +11,6 @@
 .pinkcard {
   @include mdc-card-fill-color(deeppink);
 }
+.readcardmedia {
+  @include mdc-card-media-aspect-ratio(1, 1.2)
+}

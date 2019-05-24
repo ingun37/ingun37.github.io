@@ -12,3 +12,16 @@
 .writetitle {
   color: rgb(19, 22, 61)
 }
+
+.mathbtn {
+  width: 100%;
+}
+.mathbtn.topology {
+  @include mdc-button-container-fill-color(rgb(175, 83, 83));
+  @include mdc-button-ink-color(white)
+}
+
+.mathbtn.category {
+  @include mdc-button-container-fill-color(rgb(111, 207, 183));
+  @include mdc-button-ink-color(white)
+}

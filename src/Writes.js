@@ -3,7 +3,8 @@ import "./Writes.scss"
 import "./cards.scss"
 import "./contentpanel.scss"
 import { BlogItemsScroll } from "./BlogItemsScroll";
-
+import { Cell, Grid, Row } from '@material/react-layout-grid';
+import Button from '@material/react-button';
 
 
 class Writes extends React.Component {
@@ -22,6 +23,7 @@ class Writes extends React.Component {
                 <h1 className='sectiontitle writetitle'>I WRITE THINGS</h1>
                 <div className="Writes contentpanel">
                     <BlogItemsScroll />
+                    
                 </div>
             </div>
         );

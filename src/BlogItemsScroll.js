@@ -16,36 +16,34 @@ function unpackthum(item) {
     }
 }
 
-const MenuItem = ({ idx, img, title, date }) => {
-    return (
-        <Card key={idx.toString()} className='writecard roundcard'>
-            <CardMedia square imageUrl={img} />
-            <span className='blogItemTitle'>{title}</span>
-            <span className='blogItemDate'>{date}</span>
-        </Card>
-    );
-};
-
 function OpenNewTab(url) {
     window.open(url, '_blank');
 }
 const Menu = (rssItemlist) =>
     rssItemlist.map((item, idx) => {
-        return <MenuItem idx={idx} key={idx.toString()} img={item.thumbnail} title={item.title} date={item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)} />;
+        return (
+            <div className='itemframe'>
+                <Card key={idx.toString()} className='writecard roundcard'>
+                    <CardMedia square imageUrl={item.thumbnail} />
+                    <span className='blogItemTitle'>{item.title}</span>
+                    <span className='blogItemDate'>{item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)}</span>
+                </Card>
+            </div>
+        )
     }).concat([(
-        <div className='morediv ' key={rssItemlist.length.toString()}>
-            <div 
-                className='sectionh3 moretitle' 
-                onClick={()=>OpenNewTab('https://ingun37.wordpress.com')} 
-                >MORE DEV BLOG</div>
-            <div 
+        <div className='itemframe ' key={rssItemlist.length.toString()}>
+            <div
                 className='sectionh3 moretitle'
-                onClick={()=>OpenNewTab("https://ingun37.github.io/topology-without-tears-answers/")} 
-                >MORE TOPOLOGY</div>
-            <div 
+                onClick={() => OpenNewTab('https://ingun37.wordpress.com')}
+            >MORE DEV BLOG</div>
+            <div
                 className='sectionh3 moretitle'
-                onClick={()=>OpenNewTab("https://ingun37.github.io/category-theory-for-programmers-answers/")} 
-                >MORE CATEGORY THEORY</div>
+                onClick={() => OpenNewTab("https://ingun37.github.io/topology-without-tears-answers/")}
+            >MORE TOPOLOGY</div>
+            <div
+                className='sectionh3 moretitle'
+                onClick={() => OpenNewTab("https://ingun37.github.io/category-theory-for-programmers-answers/")}
+            >MORE CATEGORY THEORY</div>
         </div>
     )]);
 

@@ -9,67 +9,6 @@
   background-color: rgb(19, 22, 61)
 }
 
-.horizdiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  padding: 8px;
-  overflow-x: scroll;
-}
 .writetitle {
   color: rgb(19, 22, 61)
-}
-.writecard {
-  width: 150px;
-  margin: 16px 4px;
-  // margin-left: 8px;
-  // margin-top: 16px;
-  // margin-bottom: 16px;
-}
-
-.writecard .writetitle {
-  // text-overflow: ellipsis;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 4px;
-  font-weight: bold;
-  color: rgb(54, 54, 54);
-  overflow: hidden;
-  white-space: normal; 
-  // height: 50px;
-  // white-space: nowrap;
-  // word-wrap: break-word;
-  // display: block;
-}
-.writecard .writedate {
-  text-overflow: ellipsis;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 4px;
-  font-size: 0.8em;
-  color: rgb(54, 54, 54);
-  // white-space: nowrap;
-  // word-wrap: break-word;
-  // display: block;
-  // width:100%;
-}
-.morediv {
-  margin: 16px 4px;
-  width: 200px;
-}
-.moretitle {
-  color: rgb(235, 232, 202);
-  text-align: center;
-  text-decoration: underline;
-}
-
-.moreiconbtn {
-  @include mdc-icon-button-ink-color(rgb(98, 198, 228));
-  display: inline-block;
-}
-
-.scroll-menu-arrow {
-  padding: 20px;
-  cursor: pointer;
 }

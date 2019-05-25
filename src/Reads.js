@@ -9,7 +9,6 @@ import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 const MenuItem = ({ idx }) => {
     const url = process.env.PUBLIC_URL + `/books/${idx}.jpg`
-    console.log(url)
     return (
         <Card key={idx.toString()} className='readcard roundcard'>
             <CardMedia className='readcardmedia' imageUrl={url} />

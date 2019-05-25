@@ -36,7 +36,6 @@ class _App extends React.Component {
   }
 
   onLeave(origin, destination, direction) {
-    console.log('onLeave', { origin, destination, direction });
     if (origin.index == 0 && destination.index == 1) {
       this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor, currentIndex: destination.index })
     } else if (origin.index == 1 && destination.index == 0) {

@@ -89,7 +89,6 @@ function fill(sigma, renderer) {
     const minY = allY.reduce(function (l, r) { return l < r ? l : r })
     const containerW = _container.offsetWidth;
     const containerH = _container.offsetHeight;
-    console.log(`${containerW}, ${containerH}, ${maxX}, ${minX}`)
     for (var nid in _nodes) {
         var n = _nodes[nid]
         n.x = fillModel(n.x, containerW, minX, maxX)
@@ -120,7 +119,6 @@ function _CompassBG(props) {
         // font: 'Roboto',
     }
     const heightPx = `${props.screenHeight}px`
-    console.log("screenh : " + heightPx)
     return (
         <BGDiv className="MyBG contain"
             pose={props.state}

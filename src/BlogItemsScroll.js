@@ -22,8 +22,8 @@ function OpenNewTab(url) {
 const Menu = (rssItemlist) =>
     rssItemlist.map((item, idx) => {
         return (
-            <div className='itemframe'>
-                <Card key={idx.toString()} className='writecard roundcard'>
+            <div key={idx.toString()} className='itemframe'>
+                <Card  className='writecard roundcard'>
                     <CardMedia square imageUrl={item.thumbnail} />
                     <span className='blogItemTitle'>{item.title}</span>
                     <span className='blogItemDate'>{item.pubDate.slice(0, 'Tue, 02 Apr 2019'.length)}</span>

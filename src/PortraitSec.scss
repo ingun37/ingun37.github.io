@@ -5,16 +5,10 @@
 }
 
 .PortraitImage {
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  
   min-height: 200px;
   height: 30vh;
   min-width: 200px;
   width: 30vh;
-
-  background-color: rgb(36, 36, 36);
 }
 
 .Sun {

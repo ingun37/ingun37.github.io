@@ -57,6 +57,13 @@
             "id": "application"
         },
         {
+            "label": "DotNet",
+            "x": 2.0819403603879904,
+            "y": -2.108725673661618,
+            "size": 1,
+            "id": "dotnet"
+        },
+        {
             "label": "Web",
             "x": 2.682693878287094,
             "y": -1.7272526056100357,
@@ -515,6 +522,11 @@
             "id": "e5-9",
             "source": "graphics",
             "target": "opencv"
+        },
+        {
+            "id": "e5-10",
+            "source": "application",
+            "target": "dotnet"
         }
     ]
 }

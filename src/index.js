@@ -37,21 +37,9 @@ class _App extends React.Component {
 
   onLeave(origin, destination, direction) {
     if (origin.index == 0 && destination.index == 1) {
-      this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor, currentIndex: destination.index })
+      this.setState({ compassState: 'visible', skyColor: coverageColor, currentIndex: destination.index })
     } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
-    }
-
-    if (origin.index == 1 && destination.index == 2) {
-      this.setState({ cityState: 'hidden', compassState: 'visible', skyColor: coverageColor, currentIndex: destination.index })
-    } else if (origin.index == 2 && destination.index == 1) {
-      this.setState({ cityState: 'visible', compassState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
-    }
-
-    if (origin.index == 2 && destination.index == 3) {
-      this.setState({ skyColor: skyblueColor, compassState: 'hidden', currentIndex: destination.index })
-    } else if (origin.index == 3 && destination.index == 2) {
-      this.setState({ skyColor: coverageColor, compassState: 'visible', currentIndex: destination.index })
+      this.setState({ compassState: 'hidden', sunState: 'rot', cityState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
     }
   }
   componentDidMount() {
@@ -77,16 +65,7 @@ class _App extends React.Component {
                   <PortraitSec />
                 </div>
                 <div className="section">
-                  <FeaturesSec />
-                </div>
-                <div className="section">
-                  <Coverage onPage={this.state.currentIndex == 2} />
-                </div>
-                <div className="section">
-                  <Writes />
-                </div>
-                <div className="section">
-                  <Reads />
+                  <Coverage onPage={this.state.currentIndex == 1} />
                 </div>
               </ReactFullpage.Wrapper>
             );

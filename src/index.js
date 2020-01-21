@@ -8,6 +8,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import FeaturesSec from "./FeaturesSec";
 import PortraitSec from "./PortraitSec";
 import Coverage from "./Coverage";
+import Math from "./Math";
 import Writes from "./Writes";
 import Reads from "./Reads";
 import posed from "react-pose";
@@ -36,10 +37,14 @@ class _App extends React.Component {
   }
 
   onLeave(origin, destination, direction) {
-    if (origin.index == 0 && destination.index == 1) {
+    if (destination.index == 0) {
+      this.setState({ compassState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
+    }
+    if (destination.index == 1) {
       this.setState({ compassState: 'visible', skyColor: coverageColor, currentIndex: destination.index })
-    } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ compassState: 'hidden', sunState: 'rot', cityState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
+    }
+    if (destination.index == 2) {
+      this.setState({ compassState: 'hidden', skyColor: dayColor, currentIndex: destination.index })
     }
   }
   componentDidMount() {
@@ -66,6 +71,9 @@ class _App extends React.Component {
                 </div>
                 <div className="section">
                   <Coverage onPage={this.state.currentIndex == 1} />
+                </div>
+                <div className="section">
+                  <Math />
                 </div>
               </ReactFullpage.Wrapper>
             );

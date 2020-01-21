@@ -10,9 +10,9 @@ function MyGrid() {
     return (
         <Grid>
             <Row>
-                <MyCell width={4} color='bluecard' img='' title='Programming' desc='Been programming straight 13 years' />
-                <MyCell width={4} color='pinkcard' img='' title='Mathematics' desc='My life, universe and everything' />
-                <MyCell width={4} color='greencard' img='' title='Painting' desc='Painting is my side chick' />
+                <MyCell width={4} color='bluecard' img='Source-code-icon' title='Programming' desc='Been programming straight 13 years' />
+                <MyCell width={4} color='pinkcard' img='ftfunct' title='Mathematics' desc='My life, universe and everything' />
+                <MyCell width={4} color='greencard' img='painting' title='Painting' desc='Painting is my side chick' />
             </Row>
         </Grid>
     );

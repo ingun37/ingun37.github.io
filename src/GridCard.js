@@ -19,10 +19,14 @@ function DesktopCell(props) {
     const {
         width, color, img, title, desc
     } = props;
+    var imgurl = ''
+    if (img) {
+        imgurl = process.env.PUBLIC_URL + `/${img}.svg`
+    }
     return (
         <Cell columns={width} tabletColumns={12} phoneColumns={12}>
             <Card className={`MyCard DesktopCard roundcard ${color}`} >
-                <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{ height: "100%" }}>
+                <CardMedia imageUrl={imgurl} style={{ height: "100%" }}>
                     <div className="blackDiv">
                         <div className='sectionh2 head'>{title}</div>
                         <div className='mdc-typography--caption sub'>{desc}</div>
@@ -37,10 +41,14 @@ function MobileCell(props) {
     const {
         color, img, title, desc
     } = props;
+    var imgurl = ''
+    if (img) {
+        imgurl = process.env.PUBLIC_URL + `/${img}.svg`
+    }
     return (
         <Cell columns={12} tabletColumns={12} phoneColumns={12}>
             <Card className={`MyCard MobileCard roundcard ${color}`} >
-                <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{ height: "100%" }}>
+                <CardMedia imageUrl={imgurl} style={{ height: "100%" }}>
                     <div className="blackDiv">
                         <div className='sectionh2 head'>{title}</div>
                         <div className='mdc-typography--caption sub'>{desc}</div>

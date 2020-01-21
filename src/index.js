@@ -32,14 +32,14 @@ const mapSizesToProps = ({ width }) => ({
 })
 class _App extends React.Component {
   state = {
-    sunState: 'hidden', cityState: 'hidden', skyColor: dayColor, compassState: 'hidden', currentIndex: 0
+    sunState: 'hidden', cityState: 'hidden', skyColor: nightColor, compassState: 'hidden', currentIndex: 0
   }
 
   onLeave(origin, destination, direction) {
     if (origin.index == 0 && destination.index == 1) {
       this.setState({ sunState: 'fadeaway', cityState: 'visible', skyColor: nightColor, currentIndex: destination.index })
     } else if (origin.index == 1 && destination.index == 0) {
-      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: dayColor, currentIndex: destination.index })
+      this.setState({ sunState: 'rot', cityState: 'hidden', skyColor: nightColor, currentIndex: destination.index })
     }
 
     if (origin.index == 1 && destination.index == 2) {

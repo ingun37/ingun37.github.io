@@ -3,6 +3,20 @@ import "./PortraitSec.scss"
 import "./contentpanel.scss"
 import posed from "react-pose";
 import {Image} from 'cloudinary-react';
+import MyCell from './GridCard'
+import { Cell, Grid, Row } from '@material/react-layout-grid';
+
+function MyGrid() {
+    return (
+        <Grid>
+            <Row>
+                <MyCell width={4} color='bluecard' img='' title='Programming' desc='Been programming straight 13 years' />
+                <MyCell width={4} color='pinkcard' img='' title='Mathematics' desc='My life, universe and everything' />
+                <MyCell width={4} color='greencard' img='' title='Painting' desc='Painting is my side chick' />
+            </Row>
+        </Grid>
+    );
+}
 
 class PortraitSec extends React.Component {
     state = {}
@@ -21,9 +35,10 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
+                <div className='sectiontitle title'>HI I'M <span className='highlight'>INGUN</span></div>
+                <div className='sectiontitle title'>CHECK OUT MY PROFRESSIONS</div>
                 <div className="contentpanel">
-                    <div className='sectiontitle title'>HI I'M INGUN</div>
-                    <div className='sectiontitle title'>CHECK ME OUT AS...</div>
+                    <MyGrid></MyGrid>
                 </div>
             </div>
         );

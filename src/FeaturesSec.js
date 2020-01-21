@@ -15,60 +15,11 @@ import Card, {
 } from "@material/react-card";
 import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 
-function DesktopCell(props) {
-    const {
-        width, color, img, title, desc
-    } = props;
-    return (
-        <Cell columns={width} tabletColumns={12} phoneColumns={12}>
-            <Card className={`MyCard DesktopCard roundcard ${color}`} >
-                <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{ height: "100%" }}>
-                    <div className="blackDiv">
-                        <div className='sectionh2 head'>{title}</div>
-                        <div className='mdc-typography--caption sub'>{desc}</div>
-                    </div>
-                </CardMedia>
-            </Card>
-        </Cell>
-    )
-}
-
-function MobileCell(props) {
-    const {
-        color, img, title, desc
-    } = props;
-    return (
-        <Cell columns={12} tabletColumns={12} phoneColumns={12}>
-            <Card className={`MyCard MobileCard roundcard ${color}`} >
-                <CardMedia imageUrl={process.env.PUBLIC_URL + `/${img}.svg`} style={{ height: "100%" }}>
-                    <div className="blackDiv">
-                        <div className='sectionh2 head'>{title}</div>
-                        <div className='mdc-typography--caption sub'>{desc}</div>
-                    </div>
-                </CardMedia>
-            </Card>
-        </Cell>
-    )
-}
-const desktopBreakpoint = parseInt(scss.desktopbp.match(/^\d+/g).shift() || '840')
-
-const mapSizesToProps = ({ width }) => ({
-    isDesktop: width >= desktopBreakpoint,
-})
-
-function CondCell(props) {
-    if (props.isDesktop) {
-        return DesktopCell(props)
-    } else {
-        return MobileCell(props)
-    }
-}
-
-const MyCell = withSizes(mapSizesToProps)(CondCell)
+import MyCell from './GridCard'
 
 function MyGrid() {
     return (
-        <Grid className='featuresgrid'>
+        <Grid>
             <Row>
                 <MyCell width={4} color='greencard' img='bridge' title='Global' desc='전 세계 개발자들과의 활발한 소통' />
                 <MyCell width={4} color='pinkcard' img='glasses' title='Good Hipster' desc='앞서가는 정보력' />

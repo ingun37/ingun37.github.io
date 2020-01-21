@@ -21,15 +21,10 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
-                <div className='sectiontitle title'>INTRODUCING</div>
-                <div className='centerer'>
-                    <div className='circle'>
-                        <div ref={this.refCallback} className="PortraitImage" >
-                            <Image cloudName="ingun37" publicId="face.png" width={widthPx} height={heightPx} crop="pad" quality="100"/>
-                        </div>
-                    </div>
+                <div className="contentpanel">
+                    <div className='sectiontitle title'>HI I'M INGUN</div>
+                    <div className='sectiontitle title'>CHECK ME OUT AS...</div>
                 </div>
-                <div className='sectiontitle title'>JON IN GUN</div>
             </div>
         );
     }

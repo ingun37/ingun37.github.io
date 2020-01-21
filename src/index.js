@@ -63,7 +63,6 @@ class _App extends React.Component {
     const compasssvgURL = 'url(' + process.env.PUBLIC_URL + '/compass.svg' + ')'
     return (
       <SkyDiv className="App" pose={this.state.skyColor} >
-        <SunBG state={this.state.sunState} />
         <CityBG state={this.state.cityState} />
         <CompassBG state={this.state.compassState} />
         <ReactFullpage

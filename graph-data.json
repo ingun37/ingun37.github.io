@@ -24,9 +24,16 @@
         {
             "label": "OpenCV",
             "x": 2.561977523852386,
-            "y": 1.7377387335974432,
+            "y": 1.5377387335974432,
             "size": 3,
             "id": "opencv"
+        },
+        {
+            "label": "CUDA",
+            "x": 2.561977523852386,
+            "y": 2.3377387335974432,
+            "size": 3,
+            "id": "cuda"
         },
         {
             "label": "OpenGL",
@@ -55,6 +62,13 @@
             "y": -3.108725673661618,
             "size": 3,
             "id": "application"
+        },
+        {
+            "label": "DotNet",
+            "x": 2.0819403603879904,
+            "y": -2.108725673661618,
+            "size": 1,
+            "id": "dotnet"
         },
         {
             "label": "Web",
@@ -136,9 +150,23 @@
         {
             "label": "Linear Algebra",
             "x": 1.8,
-            "y": 0.4,
+            "y": 2.4,
             "size": 3,
             "id": "linearalgebra"
+        },
+        {
+            "label": "AI",
+            "x": 1.8,
+            "y": 1.8,
+            "size": 3,
+            "id": "ai"
+        },
+        {
+            "label": "Tensor Flow",
+            "x": 2.0,
+            "y": 1.4,
+            "size": 1,
+            "id": "tensorflow"
         },
         {
             "label": "Microservices",
@@ -515,6 +543,31 @@
             "id": "e5-9",
             "source": "graphics",
             "target": "opencv"
+        },
+        {
+            "id": "e5-10",
+            "source": "application",
+            "target": "dotnet"
+        },
+        {
+            "id": "e5-11",
+            "source": "linearalgebra",
+            "target": "ai"
+        },
+        {
+            "id": "e5-13",
+            "source": "ai",
+            "target": "tensorflow"
+        },
+        {
+            "id": "e5-14",
+            "source": "linearalgebra",
+            "target": "opencv"
+        },
+        {
+            "id": "e5-15",
+            "source": "linearalgebra",
+            "target": "cuda"
         }
     ]
 }

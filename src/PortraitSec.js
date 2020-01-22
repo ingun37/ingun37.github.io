@@ -5,15 +5,15 @@ import posed from "react-pose";
 import {Image} from 'cloudinary-react';
 import MyCell from './GridCard'
 import { Cell, Grid, Row } from '@material/react-layout-grid';
-import Title from './Title.js'
+import Title, { SubTitle} from './Title.js'
 
 function MyGrid() {
     return (
         <Grid>
             <Row>
                 <MyCell width={4} color='bluecard' img='Source-code-icon' title='PROGRAMMING' desc="13 years of experiences on software development" />
-                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Category Theory, Topology and many other areas" />
-                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='My original works' />
+                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Various applications in software and programming" />
+                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='Authentic paintings' />
             </Row>
         </Grid>
     );
@@ -36,8 +36,9 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
-                <Title className='title'>HI I'M <span className='highlight'>INGUN</span>. CHECKOUT MY POSTS ABOUT</Title>
-\                <div className="contentpanel">
+                <Title className='title'>THIS IS <span className='highlight'>INGUN</span>'S WEB PORTFOLIO</Title>
+                <SubTitle className='title'>GET TO KNOW ME BY MY...</SubTitle>
+                <div className="contentpanel">
                     <MyGrid></MyGrid>
                 </div>
             </div>

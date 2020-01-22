@@ -21,9 +21,12 @@ export class Bar extends React.Component {
   onWordpress() {
     window.open("https://ingun37.wordpress.com", '_blank');
   }
+  onGram() {
+    window.open("https://www.instagram.com/ingun37/", '_blank');
+  }
   render() {
     return (
-      <TopAppBar className='mybar' shortCollapsed={true} style={{ width: '144px' }}>
+      <TopAppBar className='mybar' shortCollapsed={true} style={{ width: '180px' }}>
         <TopAppBarRow>
           <TopAppBarIcon navIcon tabIndex={0}>
             <MaterialIcon hasRipple icon='email' onClick={this.onMail} />
@@ -33,6 +36,9 @@ export class Bar extends React.Component {
           </TopAppBarIcon>
           <TopAppBarIcon navIcon >
             <Icon img="wordpress" color="white" onClick={this.onWordpress} />
+          </TopAppBarIcon>
+          <TopAppBarIcon navIcon >
+            <Icon img="gram" color="white" onClick={this.onGram} />
           </TopAppBarIcon>
         </TopAppBarRow>
       </TopAppBar>

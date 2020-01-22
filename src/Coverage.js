@@ -3,6 +3,8 @@ import { default as scss } from "./Coverage.scss"
 import "./contentpanel.scss"
 import "./font.scss"
 import {BrandsMarquee} from './BrandsMarquee'
+import Title from './Title'
+
 class Coverage extends React.Component {
     render() {
         const setting = {
@@ -16,7 +18,7 @@ class Coverage extends React.Component {
         }
         return (
             <div className="Coverage">
-                <h1 className="sectiontitle coveragetitle">PROGRAMMING</h1>
+                <Title className="coveragetitle">PROGRAMMING</Title>
                 <div className="contentpanel coveragepanel">
                     <div className='sectionh3 coveragesubtitle'>13 YEARS OF COUNTLESS EXPERIENCES ON SOFTWARE DEVELOPMENT</div>
                     <BrandsMarquee onPage={this.props.onPage || false}/>

@@ -72,6 +72,7 @@ function CondCell(props) {
     }
 }
 
-const MyCell = withSizes(mapSizesToProps)(CondCell)
+const withIsDesktop = withSizes(mapSizesToProps)
+const MyCell = withIsDesktop(CondCell)
 
-export default MyCell
+export {MyCell as default, withIsDesktop}

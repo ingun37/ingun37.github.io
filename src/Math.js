@@ -11,6 +11,7 @@ import Card, {
     CardActionButtons,
     CardActionIcons
 } from "@material/react-card";
+import Title from './Title'
 
 function MyGrid() {
     return (
@@ -38,7 +39,7 @@ class Math extends React.Component {
     render() {
         return (
             <div className="Math">
-                <h1 className="sectiontitle title">MATHEMATICS</h1>
+                <Title className="title">MATHEMATICS</Title>
                 <div className="contentpanel panel" align="center">
                     <div className='sectionh3 subtitle'>Code is seasonal and only mathematical structure wears it. Math matters most.</div>
                     <div className='sectionh3 subtitle'>Checkout my posts on various areas</div>

@@ -5,14 +5,15 @@ import posed from "react-pose";
 import {Image} from 'cloudinary-react';
 import MyCell from './GridCard'
 import { Cell, Grid, Row } from '@material/react-layout-grid';
+import Title from './Title.js'
 
 function MyGrid() {
     return (
         <Grid>
             <Row>
-                <MyCell width={4} color='bluecard' img='Source-code-icon' title='Programmer' desc="13 years of experience" />
-                <MyCell width={4} color='pinkcard' img='ftfunct' title='Mathematician' desc="Ultimate understanding of programming and practices" />
-                <MyCell width={4} color='greencard' img='painting' title='Painter' desc='Hot Affair' />
+                <MyCell width={4} color='bluecard' img='Source-code-icon' title='PROGRAMMING' desc="13 years of experiences on software development" />
+                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Category Theory, Topology and many other areas" />
+                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='My original works' />
             </Row>
         </Grid>
     );
@@ -35,7 +36,7 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
-                <div className='sectiontitle title'>HI I'M <span className='highlight'>INGUN</span></div>
+                <Title className='title'>HI I'M <span className='highlight'>INGUN</span>. CHECKOUT MY POSTS ABOUT</Title>
 \                <div className="contentpanel">
                     <MyGrid></MyGrid>
                 </div>

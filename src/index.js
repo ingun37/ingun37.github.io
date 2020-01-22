@@ -21,7 +21,7 @@ import { withIsDesktop } from "./Sizes";
 const dayColor = "rgb(223, 29, 62)"
 const nightColor = "rgb(11, 16, 77)"
 const coverageColor = 'rgb(226, 139, 153)'
-const skyblueColor = 'rgb(243, 243, 219)'
+const skyblueColor = scss.skyblueColor
 
 const SkyDiv = posed.div({
   [dayColor]: { backgroundColor: dayColor },
@@ -46,6 +46,9 @@ class _App extends React.Component {
     }
     if (destination.index == 2) {
       this.setState({ compassState: 'hidden', skyColor: dayColor, currentIndex: destination.index })
+    }
+    if (destination.index == 3) {
+      this.setState({ compassState: 'hidden', skyColor: skyblueColor, currentIndex: destination.index })
     }
   }
   componentDidMount() {

@@ -19,7 +19,7 @@ function OpenNewTab(url) {
 class Paintings extends React.Component {
     render() {
         return (
-            <div className="Math">
+            <div className="Paintings">
                 <Title className="title">PAINTINGS</Title>
                 <div className="contentpanel panel" align="center">
                     <BlogItemsScroll></BlogItemsScroll>

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.Math .panel {
+  background-color: rgb(243, 222, 36);
+  overflow-x: hidden;
+}
+.Math .title {
+  color: rgb(11, 16, 77);
+}
+
+.subtitle {
+  color: rgb(235, 232, 202);
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5em;
+}
+.card {
+  background-color: rgb(11, 16, 77);
+}
+.moretitle {
+  color: rgb(19, 22, 61);
+  text-align: center;
+  text-decoration: underline;
+  white-space: normal; 
+  // margin-top: 1em;
+}

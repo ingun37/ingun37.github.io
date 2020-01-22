@@ -9,6 +9,7 @@ import FeaturesSec from "./FeaturesSec";
 import PortraitSec from "./PortraitSec";
 import Coverage from "./Coverage";
 import Math from "./Math";
+import Paintings from "./Paintings";
 import Writes from "./Writes";
 import Reads from "./Reads";
 import posed from "react-pose";
@@ -74,6 +75,9 @@ class _App extends React.Component {
                 </div>
                 <div className="section">
                   <Math />
+                </div>
+                <div className="section">
+                  <Paintings />
                 </div>
               </ReactFullpage.Wrapper>
             );

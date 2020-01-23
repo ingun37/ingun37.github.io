@@ -24,13 +24,18 @@ function MyGrid() {
         <Grid>
             <Row>
                 <Cell width={4}>
-                    <Card className="card" href="/answers" onClick={handleClick("/answers/?sha1=b614f31d04b3bc2b3d23ee4337475251429e5a9f")}>
-                            <div className="cardtitle">My original answers to "Category Theory For Programmers"</div>
+                    <Card className="card" onClick={handleClick("/answers/?sha1=b614f31d04b3bc2b3d23ee4337475251429e5a9f")}>
+                            <div className="cardtitle">My answers to "Category Theory For Programmers"</div>
                     </Card>
                 </Cell>
                 <Cell width={4}>
-                    <Card className="card" href="/answers" onClick={handleClick("/answers/?sha1=4c1513c92422dc16b3c5f13bd03d34ba0feeb6df")}>
-                            <div className="cardtitle">My original answers to "Topology Without Tears"</div>
+                    <Card className="card" onClick={handleClick("/answers/?sha1=4c1513c92422dc16b3c5f13bd03d34ba0feeb6df")}>
+                            <div className="cardtitle">My answers to "Topology Without Tears"</div>
+                    </Card>
+                </Cell>
+                <Cell width={4}>
+                    <Card className="card" onClick={handleClick("https://youtu.be/SmRLWwmBgQU")}>
+                            <div className="cardtitle">I made 3D Game Engine from scratch!</div>
                     </Card>
                 </Cell>
             </Row>
@@ -42,8 +47,8 @@ class Math extends React.Component {
         return (
             <div className="Math">
                 <Title className="title">MATHEMATICS</Title>
-                <SubTitle className="subtitle">I'm enthusiastic about math in various applications including declarative programming, 3D graphics, CG</SubTitle>
                 <div className="contentpanel panel" align="center">
+                    <SubTitle className="subtitle">Bigtime math nerd in various areas including applications to computer science</SubTitle>
                     <MyGrid></MyGrid>
                 </div>
             </div>

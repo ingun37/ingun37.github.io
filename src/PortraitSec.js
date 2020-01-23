@@ -12,8 +12,8 @@ function MyGrid() {
         <Grid>
             <Row>
                 <MyCell width={4} color='bluecard' img='Source-code-icon' title='PROGRAMMING' desc="13 years of experiences on software development" />
-                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Various applications in software and programming" />
-                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='Authentic paintings' />
+                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Bigtime math nerd" />
+                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='Authentic artist' />
             </Row>
         </Grid>
     );
@@ -36,8 +36,7 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
-                <Title className='title'>THIS IS <span className='highlight'>INGUN</span>'S WEB PORTFOLIO</Title>
-                <SubTitle className='title'>GET TO KNOW ME BY MY...</SubTitle>
+                <Title className='title'>WELCOME TO <span className='highlight'>INGUN</span>'S WEB PORTFOLIO</Title>
                 <div className="contentpanel">
                     <MyGrid></MyGrid>
                 </div>

@@ -36,7 +36,7 @@ class PortraitSec extends React.Component {
         let heightPx = portraitHeight ? `${portraitHeight}` : null
         return (
             <div className='PortraitSec'>
-                <Title className='title'>WELCOME TO <span className='highlight'>INGUN</span>'S WEB PORTFOLIO</Title>
+                <Title className='title'>THIS IS <span className='highlight'>INGUN</span>'S WEB PORTFOLIO</Title>
                 <div className="contentpanel">
                     <MyGrid></MyGrid>
                 </div>

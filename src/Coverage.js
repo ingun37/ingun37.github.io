@@ -3,7 +3,7 @@ import { default as scss } from "./Coverage.scss"
 import "./contentpanel.scss"
 import "./font.scss"
 import {BrandsMarquee} from './BrandsMarquee'
-import Title from './Title'
+import Title, {SubTitle} from './Title'
 
 class Coverage extends React.Component {
     render() {
@@ -19,8 +19,8 @@ class Coverage extends React.Component {
         return (
             <div className="Coverage">
                 <Title className="coveragetitle">PROGRAMMING</Title>
+                <SubTitle className='coveragesubtitle'>13 YEARS OF COUNTLESS EXPERIENCES ON SOFTWARE DEVELOPMENT</SubTitle>
                 <div className="contentpanel coveragepanel">
-                    <div className='sectionh3 coveragesubtitle'>13 YEARS OF COUNTLESS EXPERIENCES ON SOFTWARE DEVELOPMENT</div>
                     <BrandsMarquee onPage={this.props.onPage || false}/>
                 </div>
             </div>

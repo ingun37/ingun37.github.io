@@ -46,9 +46,9 @@ class Math extends React.Component {
     render() {
         return (
             <div className="Math">
-                <Title className="title">MATHEMATICS</Title>
+                <Title className="mathtitle">MATHEMATICS</Title>
+                <SubTitle className="mathsubtitle">WIDE BACKGROUND IN MATHEMATICS INCLUDING LOTS OF APPLICATIONS IN COMPUTER SCIENCE</SubTitle>
                 <div className="contentpanel panel" align="center">
-                    <SubTitle className="subtitle">Bigtime math nerd in various areas including applications to computer science</SubTitle>
                     <MyGrid></MyGrid>
                 </div>
             </div>

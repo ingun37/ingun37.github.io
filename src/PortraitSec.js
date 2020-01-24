@@ -12,7 +12,7 @@ function MyGrid() {
         <Grid>
             <Row>
                 <MyCell width={4} color='bluecard' img='Source-code-icon' title='PROGRAMMING' desc="13 years of experiences on software development" />
-                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Bigtime math nerd" />
+                <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Wide background in mathematics" />
                 <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='Authentic artist' />
             </Row>
         </Grid>

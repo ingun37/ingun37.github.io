@@ -19,7 +19,7 @@ class Coverage extends React.Component {
         return (
             <div className="Coverage">
                 <Title className="coveragetitle">PROGRAMMING</Title>
-                <SubTitle className='coveragesubtitle'>13 YEARS OF COUNTLESS EXPERIENCES OF SOFTWARE DEVELOPMENT</SubTitle>
+                <SubTitle className='coveragesubtitle'>13 YEARS OF COUNTLESS EXPERIENCES IN SOFTWARE DEVELOPMENT</SubTitle>
                 <div className="contentpanel coveragepanel">
                     <BrandsMarquee onPage={this.props.onPage || false}/>
                 </div>

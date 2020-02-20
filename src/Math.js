@@ -25,17 +25,22 @@ function MyGrid() {
             <Row>
                 <Cell width={4}>
                     <Card className="card" onClick={handleClick("/answers/?sha1=b614f31d04b3bc2b3d23ee4337475251429e5a9f")}>
-                            <div className="cardtitle">My answers to "Category Theory For Programmers"</div>
+                            <div className="cardtitle">I love Category Theory</div>
                     </Card>
                 </Cell>
                 <Cell width={4}>
                     <Card className="card" onClick={handleClick("/answers/?sha1=4c1513c92422dc16b3c5f13bd03d34ba0feeb6df")}>
-                            <div className="cardtitle">My answers to "Topology Without Tears"</div>
+                            <div className="cardtitle">I love Topology</div>
                     </Card>
                 </Cell>
                 <Cell width={4}>
                     <Card className="card" onClick={handleClick("https://youtu.be/SmRLWwmBgQU")}>
-                            <div className="cardtitle">I made 3D Game Engine from scratch!</div>
+                            <div className="cardtitle">I made a 3D Engine</div>
+                    </Card>
+                </Cell>
+                <Cell width={4}>
+                    <Card className="card" onClick={handleClick("https://github.com/ingun37/mat4ipad")}>
+                            <div className="cardtitle">I made an Algebraic Calculator</div>
                     </Card>
                 </Cell>
             </Row>

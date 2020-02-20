@@ -34,7 +34,7 @@ function MyGrid() {
                     </Card>
                 </Cell>
                 <Cell width={4}>
-                    <Card className="card" onClick={handleClick("https://youtu.be/SmRLWwmBgQU")}>
+                    <Card className="card" onClick={handleClick("https://github.com/ingun37/sujak")}>
                             <div className="cardtitle">I made a 3D Engine</div>
                     </Card>
                 </Cell>

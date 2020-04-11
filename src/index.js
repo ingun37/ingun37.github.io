@@ -50,6 +50,9 @@ class _App extends React.Component {
     if (destination.index == 3) {
       this.setState({ compassState: 'hidden', skyColor: skyblueColor, currentIndex: destination.index })
     }
+    if (destination.index == 4) {
+      this.setState({ compassState: 'hidden', skyColor: skyblueColor, currentIndex: destination.index })
+    }
   }
   componentDidMount() {
     this.setState({ sunState: 'rot' })
@@ -78,6 +81,9 @@ class _App extends React.Component {
                 </div>
                 <div className="section">
                   <Math />
+                </div>
+                <div className="section">
+                  <Writes />
                 </div>
                 <div className="section">
                   <Paintings />

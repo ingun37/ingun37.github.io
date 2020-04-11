@@ -14,7 +14,6 @@ import Card, {
 import Title, {SubTitle} from './Title'
 
 function MyGrid() {
-
     function handleClick(path) {
         return (e) => {
             window.open(path, '_blank')

@@ -13,7 +13,8 @@ function MyGrid() {
             <Row>
                 <MyCell width={4} color='bluecard' img='Source-code-icon' title='PROGRAMMING' desc="13 years of experiences in software development" />
                 <MyCell width={4} color='pinkcard' img='ftfunct' title='MATHEMATICS' desc="Wide background in mathematics" />
-                <MyCell width={4} color='greencard' img='painting' title='PAINTING' desc='Authentic artist' />
+                <MyCell width={4} color='greencard' img='write' title='WRITINGS' desc='Writings on mathematics and programming' />
+                <MyCell width={4} color='yellowcard' img='painting' title='PAINTINGS' desc='Authentic artist' />
             </Row>
         </Grid>
     );

@@ -24,9 +24,12 @@ export class Bar extends React.Component {
   onGram() {
     window.open("https://www.instagram.com/ingun37/", '_blank');
   }
+  onDevTo() {
+    window.open("https://dev.to/ingun37", '_blank');
+  }
   render() {
     return (
-      <TopAppBar className='mybar' shortCollapsed={true} style={{ width: '180px' }}>
+      <TopAppBar className='mybar' shortCollapsed={true} style={{ width: '250px' }}>
         <TopAppBarRow>
           <TopAppBarIcon navIcon tabIndex={0}>
             <MaterialIcon hasRipple icon='email' onClick={this.onMail} />
@@ -39,6 +42,9 @@ export class Bar extends React.Component {
           </TopAppBarIcon>
           <TopAppBarIcon navIcon >
             <Icon img="gram" color="white" onClick={this.onGram} />
+          </TopAppBarIcon>
+          <TopAppBarIcon actionItem>
+            <i className='material-icons devto' onClick={this.onDevTo}>DEV.TO</i>
           </TopAppBarIcon>
         </TopAppBarRow>
       </TopAppBar>

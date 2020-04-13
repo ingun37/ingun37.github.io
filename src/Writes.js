@@ -25,7 +25,7 @@ function MyGrid() {
             <Row>
                 <Cell width={4}>
                     <Card className="card" onClick={handleClick("https://dev.to/ingun37/file-s-owner-is-not-for-uiview-3n9g")}>
-                            <div className="cardtitle">File's Owner is not for UIView</div>
+                            <div className="cardtitle">UIView shouldn't be File's Owner</div>
                     </Card>
                 </Cell>
                 <Cell width={4}>
